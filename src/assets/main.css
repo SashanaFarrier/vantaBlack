@@ -1,0 +1,97 @@
+@import './base.css';
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+    background-color: var(--color-primary-dark);
+    /* padding-right: 0px !important; */
+    padding: 1.5em;
+    padding-left: calc(var(--section-gap) / 2);
+    height: 10vh;
+    transition: all 0.5s ease-in-out;
+}
+
+header ul li a,
+footer ul li a {
+  color:  var(--color-primary-lightblue) !important;
+}
+
+header ul li a:hover,
+footer ul li a:hover {
+  color: var(--color-primary-blue) !important;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.logo img {
+  max-width: 100px;
+  margin-right: 5em;
+}
+
+footer {
+  padding: 5em;
+  background-color: var(--color-primary-dark);
+}
+
+/* utlities */
+.accent-btn {
+  font-weight: bold;
+  color:  var(--color-primary-dark) !important;
+  padding: 0.5em 1em;
+  background-color: var(--color-primary-lightblue);
+}
+
+.accent-btn:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-lightblue) !important;
+}
+
+
+/* #app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+} */
+
+/* @media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+} */
+
+/* @media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+} */
