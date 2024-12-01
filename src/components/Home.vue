@@ -7,30 +7,33 @@
     gsap.registerPlugin(ScrollTrigger);
     
     onMounted(() => {
+        let screenSize = gsap.matchMedia();
         const textContents = gsap.utils.toArray(".text-content text")
         const imgEls = gsap.utils.toArray(".img")
         const colors = ["red", "grey", "pink"]
        
+        screenSize.add("(min-width: 900px)", () => {
+            imgEls.forEach((el, index) => el.style.zIndex = imgEls.length - index)
 
-        imgEls.forEach((el, index) => el.style.zIndex = imgEls.length - index)
+            gsap.set(".img", {
+                clipPath: () => "inset(0px 0px 0px 0px)"
+            })
 
-        gsap.set(".img", {
-            clipPath: () => "inset(0px 0px 0px 0px)"
-        })
+            const animation = gsap.to(".img:not(:last-child)", {
+                clipPath: () => "inset(100% 0px 0px 0px)",
+                stagger: 0.5,
+                ease: "none"
+            })
 
-        const animation = gsap.to(".img:not(:last-child)", {
-            clipPath: () => "inset(100% 0px 0px 0px)",
-            stagger: 0.5,
-            ease: "none"
-        })
-
-        ScrollTrigger.create({
-            trigger: ".grid-container",
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 1,
-            animation: animation
-        })
+            ScrollTrigger.create({
+                trigger: ".grid-container",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1,
+                animation: animation
+            })
+    })
+       
 
     // imgEls.forEach((el, index) => {
     //     gsap.set(el, {
@@ -221,41 +224,6 @@
         </section>
       </div>  
     </main>
-    <!-- <section class="grid-container">
-        <div class="grid">
-            <div class="left-col">
-                <div class="text-content">
-                    <div class="text">
-                        <h2>Need a webiste?</h2>
-                        <a href="">Order Now</a>
-                    </div>
-                </div>
-                <div class="text-content">
-                    <div class="text">
-                        <h2>Need a webiste?</h2>
-                        <a href="">Order Now</a>
-                    </div>
-                </div>
-                <div class="text-content">
-                    <div class="text">
-                        <h2>Need a webiste?</h2>
-                        <a href="">Order Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="right-col">
-                <div class="img-content">
-                    <img :src="logo" alt="">
-                </div>
-                <div class="img-content">
-                    <img :src="logo" alt="">
-                </div>
-                <div class="img-content">
-                    <img :src="logo" alt="">
-                </div>
-            </div>
-        </div>
-    </section> -->
     <Footer />
 </template>
 
@@ -263,6 +231,23 @@
    
     .grid-container {
         display: grid;
+        /* grid-template-columns: 1fr 2fr; */
+    }
+
+    .text-content {
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        /* font-size: 2rem; */
+        color: black;
+        background-color: white;
+        /* height: 100%; */
+    }
+
+
+   
+@media screen and (min-width: 900px) {
+    .grid-container {
         grid-template-columns: 1fr 2fr;
     }
 
@@ -273,19 +258,16 @@
     .text-content {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center; 
         font-size: 2rem;
-        color: black;
-        background-color: white;
         height: 100%;
     }
 
     .text-content .text {
         max-width: 20ch;
     }
-    
 
-    .right-col-wrapper {
+     .right-col-wrapper {
         display: flex;
         flex-direction: column;
         position: sticky;
@@ -295,16 +277,18 @@
     }
 
     
-.images-container .img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
+    .images-container .img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
 
-.img-content img {
-    display: block;
-    width: 100%;
-    object-fit: cover; /* Make sure images cover the entire area */
+    .img-content img {
+        display: block;
+        width: 100%;
+        object-fit: cover; 
+    }
+
 }
 
 </style>

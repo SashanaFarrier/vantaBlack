@@ -12,9 +12,10 @@ img {
 header {
     background-color: var(--color-primary-dark);
     /* padding-right: 0px !important; */
-    padding: 1.5em;
-    padding-left: calc(var(--section-gap) / 2);
+    /* padding: 1em; */
+    /* padding-left: calc(var(--section-gap) / 2); */
     height: 10vh;
+    padding-inline: 1.5em !important;
     transition: all 0.5s ease-in-out;
 }
 
