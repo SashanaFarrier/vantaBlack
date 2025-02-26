@@ -3,6 +3,7 @@
     import menuIcon from '@/components/icons/hamburger-menu.svg'
     import closeIcon from '@/components/icons/close-btn.svg'
     import { ref } from "vue"
+    import { RouterLink } from 'vue-router'
 
     let isActive = ref(false)
 
@@ -14,6 +15,7 @@
 
 <template>
     <header>
+      <div class="container">
         <nav>
             <a class="logo" href="/">
                 <img :src="logo" alt=""/>
@@ -26,7 +28,8 @@
                     <img :src="closeIcon" alt="navigation close button" width="50" height="50">
                 </div>
                 <ul class="list-items left">
-                    <li><a href="/about">About Us</a></li>
+                    <!-- <li><a href="/about">About Us</a></li> -->
+                    <li><RouterLink to="/about">About Us</RouterLink></li>
                     <li><a href="/services">Services</a></li>
                 </ul>
                 <ul class="list-items right">
@@ -35,6 +38,7 @@
                 </ul>
             </div>
         </nav>
+      </div>
     </header>
 </template>
 
@@ -148,7 +152,7 @@ ul li {
         font-size: 1rem !important;
         margin-top: 0;
     }
-/* 
+/*
     .list-items .left {
         background-color: white;
     } */
