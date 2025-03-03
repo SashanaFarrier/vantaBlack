@@ -65,29 +65,59 @@
   /* font-weight: normal; */
 }
 
-body {
-  min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
-  transition:
-    color 0.5s,
-    background-color 0.5s;
-  line-height: 1.6;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  font-size: 18px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* utlities */
+
+.container {
+  width: 80%;
+  max-width: 1440px;
+  margin-inline: auto;
 }
+
+.text-center-mx-width {
+  text-align: center;
+  max-width: 80ch;
+  margin-inline: auto;
+}
+
+.accent-btn {
+  font-weight: bold;
+  color:  var(--color-primary-dark) !important;
+  padding: 0.5em 1em;
+  background-color: var(--color-primary-lightblue);
+}
+
+.accent-btn:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-lightblue) !important;
+}
+
+.cta-btn {
+  font-weight: bold;
+  text-decoration: none;
+  color:  var(--vt-c-white);
+  justify-self: center;
+  padding: 1em 1.5em;
+  background-color: var(--color-primary-dark);
+  transition: all 500ms ease-in;
+}
+
+.cta-btn:hover {
+  color: var(--color-primary-dark);
+  background-color: var(--vt-c-white);
+}
+
+.outline-btn {
+  color: var(--color-primary-dark);
+  background-color: transparent !important;
+  border: 1px solid var(--color-primary-dark);
+  transition: all 300ms ease-in;
+}
+
+.outline-btn:hover {
+  border-color: var(--color-primary-lightblue);
+  background-color: var(--vt-c-white);
+}
+
+  
+
+

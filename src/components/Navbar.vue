@@ -17,9 +17,9 @@
     <header>
       <div class="container">
         <nav>
-            <a class="logo" href="/">
-                <img :src="logo" alt=""/>
-            </a>
+          <div class="logo">
+              <RouterLink to="/"><img :src="logo" alt="VantaBlack Technologies"/></RouterLink>
+            </div>
             <div @click="toggleNavigationMenu" class="hamburger-menu">
                 <img :src="menuIcon" alt="menu icon" width="50" height="50" />
             </div>
@@ -27,14 +27,16 @@
                 <div @click="toggleNavigationMenu" class="close-btn" :class="isActive ? 'active' : ''">
                     <img :src="closeIcon" alt="navigation close button" width="50" height="50">
                 </div>
-                <ul class="list-items left">
-                    <!-- <li><a href="/about">About Us</a></li> -->
+                <!-- <ul class="list-items left">
                     <li><RouterLink to="/about">About Us</RouterLink></li>
                     <li><a href="/services">Services</a></li>
-                </ul>
+                </ul> -->
                 <ul class="list-items right">
-                    <li><a href="/pricing">Pricing</a></li>
-                    <li><a href="/contact" class="accent-btn">Contact Us</a></li>
+                  <li><RouterLink to="/">Home</RouterLink></li>
+                  <li><RouterLink to="/about">About Us</RouterLink></li>
+                  <li><RouterLink to="/services">Services</RouterLink></li>
+                    <!-- <li><a href="/pricing">Pricing</a></li> -->
+                  <li><RouterLink to="/contact" class="accent-btn">Contact Us</RouterLink></li>
                 </ul>
             </div>
         </nav>
@@ -46,19 +48,9 @@
 
 nav {
     display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    width: 100%;
-}
-
-header {
-    position: relative;
-}
-
-nav {
     justify-content: space-between;
-    gap: 3em;
-    height: 100%;
+    align-items: center;
+    /* width: 100%; */
 }
 
 nav > ul {
@@ -68,8 +60,6 @@ nav > ul {
 
 .navigation-list {
     display: none;
-    /* width: 0px;
-    height: 0px; */
 }
 
 .active.navigation-list,
@@ -126,7 +116,7 @@ ul li {
     cursor: pointer;
 }
 
-@media screen and (min-width: 650px){
+@media screen and (min-width: 49.0625em){
     .hamburger-menu,
     .close-btn {
         display: none;
@@ -134,7 +124,7 @@ ul li {
 
     .navigation-list {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         position: unset;
         height: 100%;
@@ -146,16 +136,13 @@ ul li {
         display: flex;
         flex-direction: row;
         align-items: center;
+        gap: 2em;
     }
 
     .list-items li {
         font-size: 1rem !important;
         margin-top: 0;
     }
-/*
-    .list-items .left {
-        background-color: white;
-    } */
 
 }
 </style>
