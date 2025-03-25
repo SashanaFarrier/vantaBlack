@@ -1,5 +1,6 @@
 <script setup>
     // import logo from '@/assets/logo.png'
+    
     import webDevImg from '@/assets/website.png'
     import socialMediaImg from '@/assets/social-media.png'
     import computerRepairsImg from '@/assets/computer-repairs.png'
@@ -15,220 +16,120 @@
         const imgEls = gsap.utils.toArray(".img")
         //const colors = ["red", "grey", "pink"]
 
-        screenSize.add("(min-width: 900px)", () => {
-            imgEls.forEach((el, index) => el.style.zIndex = imgEls.length - index)
+        // screenSize.add("(min-width: 900px)", () => {
+    //         imgEls.forEach((el, index) => el.style.zIndex = imgEls.length - index)
 
-            gsap.set(".img", {
-                clipPath: () => "inset(0px 0px 0px 0px)"
-            })
+    //         gsap.set(".img", {
+    //             clipPath: () => "inset(0px 0px 0px 0px)"
+    //         })
 
-            const animation = gsap.to(".img:not(:last-child)", {
-                clipPath: () => "inset(100% 0px 0px 0px)",
-                stagger: 0.5,
-                ease: "none"
-            })
+    //         const animation = gsap.to(".img:not(:last-child)", {
+    //             clipPath: () => "inset(100% 0px 0px 0px)",
+    //             stagger: 0.5,
+    //             ease: "none"
+    //         })
 
-            ScrollTrigger.create({
-                trigger: ".grid-container",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 1,
-                animation: animation
-            })
-    })
-
-
-    // imgEls.forEach((el, index) => {
-    //     gsap.set(el, {
-    //             backgroundColor: colors[index],
+    //         ScrollTrigger.create({
+    //             trigger: ".grid-container",
+    //             start: "top top",
+    //             end: "bottom bottom",
+    //             scrub: 1,
+    //             animation: animation
     //         })
     // })
 
-    /*
-    imgEls.forEach((el, index) => {
-    ScrollTrigger.create({
-        trigger: el,
-        pin: true,         // Pin the element
-        start: "top top",  // When the top of the element reaches the top of the viewport
-        end: "bottom top", // When the bottom of the element reaches the top of the viewport
-        scrub: true,          // Smooth animation
-        markers: true,     // Optional, shows scroll markers for debugging
-        //pinSpacing: false, // Prevent additional spacing when pinning
 
-        onUpdate: (self) => {
-            // Animating height or scale as the scroll position changes
-            const progress = self.progress; // Progress of the scroll between 0 and 1
-
-            gsap.to(el, {
-                clipPath: `inset(${progress * 100}% 0% 0% 0%)`, // Clip top progressively
-                ease: "none" // Linear animation
-            });
-            // Optional: You can also animate scale if you want a smoother effect
-            // gsap.to(el, {
-            //     scale: 1 - progress,
-            //     ease: "none"
-            // });
-
-            if (progress === 1 && index < imgEls.length - 1) {
-                const nextItem = imgEls[index + 1];
-                gsap.to(nextItem, {
-                clipPath: "inset(0 0 0% 0)", // Reveal the next item when the current one is fully revealed
-                duration: 0.5
-                });
-            }
-
-        },
-
-    });
-
-    */
 });
-
-
-
-
-        /*
-        imgEls.forEach((el, index) => {
-           // let height = window.getComputedStyle(el).height.slice(0, window.getComputedStyle(el).height.length - 2);
-
-
-
-                // let height = window.getComputedStyle(el).height.slice(0, window.getComputedStyle(el).height.length - 2);
-                // window.addEventListener("scroll", () => {
-                //     scrollPos = window.scrollY / 2;
-                //     //console.log(scrollPos)
-                //     if(el.classList.contains("active"))
-                //     {
-                //         height -= scrollPos;
-
-                //         // el.style.top = height + "px"
-
-                //     }
-
-                //     return scrollPos
-                // });
-
-
-            ScrollTrigger.create({
-                trigger: el,
-                pin: true,
-                start: "top top",
-                end: "bottom top",
-                scrub: 4,
-                markers: true,
-                pinSpacing: false
-            }),
-
-            gsap.set(el, {
-                backgroundColor: colors[index],
-
-                // height: () => {
-                //     window.addEventListener("scroll", () => {
-                //     scrollPos = window.scrollY;
-                //     //console.log(scrollPos); // Logs scroll position as you scroll
-                //     return scrollPos
-                // });
-
-                //}
-            });
-
-
-        }) */
-
-        // const tl = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: "grid",
-        //         pin: true,
-        //         scrub: 4
-        //     }
-        // })
-
-
-        // const tl = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: ".img-content",
-        //         pin: ".text-content",
-        //         start: "top top",
-        //         end: "bottom center",
-        //         scrub: 4,
-        //         markers: true
-        //     }
-        // })
-
-
-        /*
-        let tl = gsap.timeline({
-    // yes, we can add it to an entire timeline!
-        scrollTrigger: {
-            trigger: '.right-col',
-            pin: true, // pin the trigger element while active
-            start: 'top top', // when the top of the trigger hits the top of the viewport
-            end: '+=2000', // end after scrolling 500px beyond the start
-            scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            // snap: {
-            //     snapTo: 'labels', // snap to the closest label in the timeline
-            //     duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-            //     delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-            //     ease: 'power1.inOut' // the ease of the snap animation ("power3" by default)
-            // }
-        }
-    }); */
 
 
 </script>
 
 <template>
+    <div class="hero">
+    <div class="container">
+      <div class="hero-container__content">
+        <h1>Your All-in-One Digital Solution</h1>
+        <p>At VantaBlack Technologies, we help businesses and individuals thrive in the digital world. Whether you need a stunning website, effective social media strategies, or reliable tech support, we've got you covered!</p>
+        <RouterLink to="/contact" class="cta-btn">Contact us</RouterLink>
+      </div>
+    </div>
+  </div>
     <main>
         <!-- <div class="spacer"></div> -->
-      <div class="grid-container">
-        <section class="left-col">
-            <div class="left-col-wrapper">
-              <div class="left-col-wrapper__body">
-                    <h2>Website Design & Hosting</h2>
-                    <div class="text-content">
-                      <p>Custom-built solutions on WordPress, Wix, Squarespace, Shopify, or fully coded from scratch.</p>
-                    </div>
-                    <!-- <RouterLink class="cta-btn" to="/contact">Launch Your Website</RouterLink> -->
-                    <RouterLink class="cta-btn" to="/contact">Contact Us</RouterLink>
-              </div>
+        <section class="services">
+            <div class="cards-container">
+            <div class="card">
+                <font-awesome-icon icon="globe" />
+                <h2>Web Development</h2>
+                <p>Get a modern, responsive, and high-performing website tailored to your brand. Whether it's a business site, e-commerce store, or portfolio, we build it right.</p>
+                <RouterLink to="/services">Learn More</RouterLink>
             </div>
-            <div class="left-col-wrapper">
-              <div class="left-col-wrapper__body">
-                    <h2>Computer Repairs & Troubleshooting</h2>
-                    <div class="text-content">
-                      <p>Fast and efficient tech support to keep your devices running smoothly.</p>
-                    </div>
-                    <!-- <RouterLink class="cta-btn" to="/contact">Fix My Device</RouterLink> -->
-                    <RouterLink class="cta-btn" to="/contact">Contact Us</RouterLink>
-              </div>
+            <div class="card">
+                <h2>Social Media Management</h2>
+                <p>Elevate your online presence with engaging content, audience growth strategies, and expert social media management. Let’s turn likes into leads!</p>
+                <RouterLink to="/services">Learn More</RouterLink>
             </div>
-           <div class="left-col-wrapper">
-            <div class="left-col-wrapper__body">
-                    <h2>Social Media Content Creation</h2>
-                    <div class="text-content">
-                      <p>Professional, eye-catching posts designed with Canva to grow your online presence.</p>
-                    </div>
-                    <!-- <RouterLink class="cta-btn" to="/contact">Boost My Social Media</RouterLink> -->
-                    <RouterLink class="cta-btn" to="/contact">Contact Us</RouterLink>
-              </div>
-           </div>
+            <div class="card">
+                <h2> Computer Repairs & Troubleshooting</h2>
+                <p>Is your computer slow, glitching, or refusing to turn on? Our tech experts diagnose and fix issues fast, so you can get back to work.</p>
+                <RouterLink to="/services">Learn More</RouterLink>
+            </div>
+            
+        </div>
         </section>
-        <section class="right-col">
-            <div class="right-col-wrapper">
-                <div class="images-container">
-                    <div class="img">
-                        <img :src="webDevImg" alt="">
-                    </div>
-                    <div class="img">
-                        <img :src="computerRepairsImg" alt="">
-                    </div>
-                    <div class="img">
-                        <img :src="socialMediaImg" alt="">
-                    </div>
-                </div>
+        
+        <section class="cta-banner">
+            <div class="container">
+                <h3>Let’s Build, Grow & Fix Together!</h3>
+                <p>Your digital success starts here. Whether you need a website that stands out, social media that engages, or tech support that keeps you running, we’re ready to help. Let’s turn your vision into reality—get in touch today! </p>
+                <RouterLink to="/contact" class="cta-btn">Contact us</RouterLink>
             </div>
         </section>
-      </div>
+        <section class="how-we-work">
+            <div class="container">
+                <h2>How We Work</h2>
+                <div class="cards-container">
+            <div class="card">
+                <font-awesome-icon icon="globe" />
+                <h2>Web Development</h2>
+                <ol>
+                    <li><strong>Consultation </strong>– We understand your business goals and requirements for your website.</li>
+                    <li><strong>Strategy & Planning </strong>– We design a website that reflects your brand and meets your objectives, whether it’s for e-commerce or a simple portfolio.</li>
+                    <li><strong>Execution </strong>– Our developers bring your site to life with the latest technologies, ensuring responsiveness and performance.</li>
+                    <li><strong>Launch & Support </strong>– We launch your website and provide ongoing support, ensuring it stays updated and functional.</li>
+                </ol>
+            </div>
+            <div class="card">
+                <h2>Social Media Management</h2>
+                <ol>
+                    <li><strong>Consultation </strong>– We discuss your brand’s voice and target audience to understand your goals on social media.</li>
+                    <li><strong>Strategy & Planning </strong>– We create a content plan and strategy that engages your audience and drives results.</li>
+                    <li><strong>Execution </strong>– We handle content creation, scheduling, and community engagement to boost your social presence.</li>
+                    <li><strong>Launch & Support </strong>– We analyze performance and adjust strategies for continuous growth, keeping you updated along the way.</li>
+                </ol>
+            </div>
+            <div class="card">
+                <h2>Computer Repairs & Troubleshooting</h2>
+                <ol>
+                    <li><strong>Consultation </strong>– We listen to your tech issues and gather details about your device's problems.</li>
+                    <li><strong>Diagnosis & Planning </strong>– We diagnose the problem and outline a repair or solution plan.</li>
+                    <li><strong>Execution </strong>– We perform the necessary repairs or troubleshooting efficiently, ensuring your devices run smoothly.</li>
+                    <li><strong>Support & Maintenance </strong>– We provide ongoing support and advice to prevent future issues and optimize your systems.</li>
+                </ol>
+            </div>
+            
+        </div>
+            </div>
+        </section>
+      <!-- <div class="container">
+        <div class="about-us">
+            <div class="content">
+                <h2>Who We Are & What We Do</h2>
+                <p>We are a passionate team dedicated to helping businesses and individuals navigate the digital space with ease. Our expertise spans across web development, social media management, and computer troubleshooting, ensuring that our clients have the technology and online presence they need to succeed.</p>
+                <p>From crafting stunning, high-performance websites to managing social media campaigns that drive engagement, we focus on delivering custom solutions that align with your unique goals. Whether you're looking to establish an online presence, grow your audience, or fix technical issues, we’re here to help.</p>
+            </div>
+        </div>
+      </div> -->
     </main>
 </template>
 
@@ -240,29 +141,114 @@
     line-height: 1.2;
     color: #fff;
   }
-    .grid-container {
-        display: grid;
-        /* grid-template-columns: 1fr 2fr; */
+
+  main {
+    /* height: 100vh; */
+    
+  }
+
+  .hero {
+display: flex;
+flex-direction: column;
+justify-content: center;
+background-color: #007EA7;
+background-image: url(/src/assets/home-banner.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-blend-mode:soft-light;
+height: 85vh;
+
+  .hero-container__content {
+    max-width: 50ch;
+    p {
+        margin: 2em 0px 4em;
+    }
+  }
+}
+
+.services {
+    padding: 2em;
+    background-color: #007EA7;
+    padding-top: 0px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 1em;
+    
+}
+
+.card {
+    flex-shrink: 1;
+    width: 100%;
+    padding: 2em;
+    border-radius: 1em;
+
+    h2 {
+        font-size: 1rem;
     }
 
-    .left-col-wrapper__body {
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
-        /* font-size: 2rem; */
-        color: 000;
-        background-color: #007EA7;
-        /* height: 100%; */
+    p {
+        margin: 1em 0px 2em;
+    }
+}
 
-        .text-content {
-          font-size: 1.5rem;
-          margin-block: 2rem;
+.card:nth-of-type(1) {
+    color: #fff;
+    background-color: var( --color-primary-dark);
+}
+
+.card:nth-of-type(2) {
+    color: #000;
+    background-color: var(--color-primary-lightblue);
+
+    h2 {
+        color: #000;
+    }
+}
+
+.card:nth-of-type(3) {
+    color: #fff;
+    background-color: var( --color-secondary-dark);
+}
+
+
+.cta-banner {
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    padding: 6em;
+
+    h3 {
+        font-size: clamp(1.5rem, calc(1rem + 2vw), 3rem);
+        color: var(--color-primary-lightblue);
+    }
+
+    p {
+        margin-bottom: 3em;
+    }
+}
+
+.how-we-work {
+        background-color: var(--color-primary-lightblue);
+        padding-block: 6em;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        .card:nth-of-type(2) {
+    
+            background-color: #fff;
+
         }
     }
+    
 
 
 
-@media screen and (min-width: 900px) {
+/* @media screen and (min-width: 900px) {
     .grid-container {
         grid-template-columns: 1fr 2fr;
     }
@@ -276,10 +262,7 @@
       place-content: center;
       text-align: center;
       padding: 1.5rem;
-        /* display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem; */
+        
         height: 100%;
     }
 
@@ -304,12 +287,8 @@
       object-fit: cover;
     }
 
-    /* .img-content img {
-        display: block;
-        width: 100%;
-        object-fit: cover;
-    } */
+    
 
-}
+} */
 
 </style>
