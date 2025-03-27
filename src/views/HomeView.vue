@@ -1,9 +1,11 @@
 <script setup>
     // import logo from '@/assets/logo.png'
-    
-    import webDevImg from '@/assets/website.png'
-    import socialMediaImg from '@/assets/social-media.png'
-    import computerRepairsImg from '@/assets/computer-repairs.png'
+
+    // import webDevImg from '@/assets/website.png'
+    // import socialMediaImg from '@/assets/social-media.png'
+    // import computerRepairsImg from '@/assets/computer-repairs.png'
+    import abstractImg from '@/assets/icon-1.png'
+    import targetIcon from '@/assets/target-icon.png'
     import { onMounted } from "vue"
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,9 +13,9 @@
     gsap.registerPlugin(ScrollTrigger);
 
     onMounted(() => {
-        let screenSize = gsap.matchMedia();
+        // let screenSize = gsap.matchMedia();
         //const textContents = gsap.utils.toArray(".text-content text")
-        const imgEls = gsap.utils.toArray(".img")
+        // const imgEls = gsap.utils.toArray(".img")
         //const colors = ["red", "grey", "pink"]
 
         // screenSize.add("(min-width: 900px)", () => {
@@ -74,62 +76,102 @@
                 <p>Is your computer slow, glitching, or refusing to turn on? Our tech experts diagnose and fix issues fast, so you can get back to work.</p>
                 <RouterLink to="/services">Learn More</RouterLink>
             </div>
-            
+
         </div>
         </section>
-        
+
         <section class="cta-banner">
             <div class="container">
-                <h3>Let’s Build, Grow & Fix Together!</h3>
+              <div class="flex-container">
+                <div class="left-col">
+                  <h3>Let’s Build, Grow & Fix Together!</h3>
                 <p>Your digital success starts here. Whether you need a website that stands out, social media that engages, or tech support that keeps you running, we’re ready to help. Let’s turn your vision into reality—get in touch today! </p>
                 <RouterLink to="/contact" class="cta-btn">Contact us</RouterLink>
+                </div>
+                <div class="right-col">
+                  <img :src="targetIcon" alt="">
+                </div>
+              </div>
             </div>
+        </section>
+        <section class="innovative-solutions">
+          <div class="container">
+            <div class="flex-container">
+              <div class="left-col">
+                <h3>Innovative Solutions, <br> Seamless Experiences </h3>
+              </div>
+              <div class="right-col">
+                <p>Discover the expertise and passion behind VantaBlack Technologies as we bring cutting-edge web development, social media management and computer solutions from concept to reality.</p>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="how-we-work">
+          <div class="container">
+            <h3>How We Work</h3>
+            <div class="cards-container">
+                <div class="card">
+                    <h4>Consultation</h4>
+                    <p>We take the time to understand your goals, challenges, and requirements to craft the best solution for your business.</p>
+                </div>
+                <div class="card">
+                    <h4>Strategy & Planning</h4>
+                    <p>Whether it's a website, social media strategy, or computer troubleshooting, we develop a tailored approach to meet your needs.</p>
+                </div>
+                <div class="card">
+                    <h4>Execution</h4>
+                    <p>Our team applies expertise and cutting-edge technology to bring your vision to life, ensuring efficiency, performance, and reliability.</p>
+                </div>
+            </div>
+          </div>
+        </section>
+        <section class="more-reasons">
             <div class="container">
-                <h2>How We Work</h2>
-                <div class="cards-container">
-            <div class="card">
-                <font-awesome-icon icon="globe" />
-                <h2>Web Development</h2>
-                <ol>
-                    <li><strong>Consultation </strong>– We understand your business goals and requirements for your website.</li>
-                    <li><strong>Strategy & Planning </strong>– We design a website that reflects your brand and meets your objectives, whether it’s for e-commerce or a simple portfolio.</li>
-                    <li><strong>Execution </strong>– Our developers bring your site to life with the latest technologies, ensuring responsiveness and performance.</li>
-                    <li><strong>Launch & Support </strong>– We launch your website and provide ongoing support, ensuring it stays updated and functional.</li>
-                </ol>
-            </div>
-            <div class="card">
-                <h2>Social Media Management</h2>
-                <ol>
-                    <li><strong>Consultation </strong>– We discuss your brand’s voice and target audience to understand your goals on social media.</li>
-                    <li><strong>Strategy & Planning </strong>– We create a content plan and strategy that engages your audience and drives results.</li>
-                    <li><strong>Execution </strong>– We handle content creation, scheduling, and community engagement to boost your social presence.</li>
-                    <li><strong>Launch & Support </strong>– We analyze performance and adjust strategies for continuous growth, keeping you updated along the way.</li>
-                </ol>
-            </div>
-            <div class="card">
-                <h2>Computer Repairs & Troubleshooting</h2>
-                <ol>
-                    <li><strong>Consultation </strong>– We listen to your tech issues and gather details about your device's problems.</li>
-                    <li><strong>Diagnosis & Planning </strong>– We diagnose the problem and outline a repair or solution plan.</li>
-                    <li><strong>Execution </strong>– We perform the necessary repairs or troubleshooting efficiently, ensuring your devices run smoothly.</li>
-                    <li><strong>Support & Maintenance </strong>– We provide ongoing support and advice to prevent future issues and optimize your systems.</li>
-                </ol>
-            </div>
-            
-        </div>
+              <div class="flex-container">
+                <div class="left-col">
+                  <img :src="abstractImg" alt="">
+                </div>
+                <div class="right-col">
+                  <h3>More Reasons to Simplify Tech for Your Business</h3>
+                <p>Get the digital solutions you need without the hassle. Free consultations included.</p>
+                <RouterLink to="/contact" class="cta-btn">Contact us</RouterLink>
+                </div>
+              </div>
             </div>
         </section>
-      <!-- <div class="container">
-        <div class="about-us">
-            <div class="content">
-                <h2>Who We Are & What We Do</h2>
-                <p>We are a passionate team dedicated to helping businesses and individuals navigate the digital space with ease. Our expertise spans across web development, social media management, and computer troubleshooting, ensuring that our clients have the technology and online presence they need to succeed.</p>
-                <p>From crafting stunning, high-performance websites to managing social media campaigns that drive engagement, we focus on delivering custom solutions that align with your unique goals. Whether you're looking to establish an online presence, grow your audience, or fix technical issues, we’re here to help.</p>
+        <section class="faq">
+          <div class="container">
+            <div class="flex-container">
+              <div class="text-content">
+              <details>
+                <summary>How do I get started with a website or tech service?</summary>
+                <p>Simply contact us through our form, and we’ll schedule a free consultation to discuss your needs and recommend the best solution.</p>
+              </details>
+              <details>
+                <summary>How long does it take to develop a website?</summary>
+                <ul>
+                  <li>CMS websites: 1-2 weeks</li>
+                  <li>Custom-coded websites: 2-4 weeks</li>
+                  <li>E-commerce websites: 4+ weeks (depending on complexity)</li>
+                </ul>
+              </details>
+              <details>
+                <summary>Do you offer website maintenance?</summary>
+                <p>Yes! We provide monthly maintenance services to keep your website running smoothly.</p>
+              </details>
+              <details>
+                <summary>What social media platforms do you manage?</summary>
+                <p>We manage Facebook and Instagram but can handle other platforms upon request.</p>
+              </details>
+              <details>
+                <summary>What if I need a custom solution not listed on your website?</summary>
+                <p>We can create custom tech solutions tailored to your needs! Contact us, and we’ll discuss the best approach for your project.</p>
+              </details>
+
             </div>
-        </div>
-      </div> -->
+            </div>
+          </div>
+        </section>
     </main>
 </template>
 
@@ -142,9 +184,19 @@
     color: #fff;
   }
 
+  h3 {
+        font-size: clamp(1.5rem, calc(1rem + 2vw), 3rem);
+        /* color: var(--color-primary-lightblue); */
+        line-height: 1.2;
+    }
+
   main {
     /* height: 100vh; */
-    
+
+  }
+
+  .flex-container {
+    display: flex;
   }
 
   .hero {
@@ -175,17 +227,60 @@ height: 85vh;
 .cards-container {
     display: flex;
     gap: 1em;
-    
+
+}
+
+.how-we-work {
+  h3 {
+     color: #000;
+     margin-bottom: 3em;
+  }
+
+  .card:nth-of-type(1)::after {
+  font-weight: 900;
+  font-size: 4rem;
+  color: var(--color-primary-lightblue);
+  content: "01";
+  position: absolute;
+  top: -110px;
+  opacity: 0.4;
+  /* width: 80px */
+}
+
+  .card:nth-of-type(2)::after {
+  font-weight: 900;
+  font-size: 4rem;
+  color: var(--color-primary-lightblue);
+  content: "02";
+  position: absolute;
+  top: -110px;
+  opacity: 0.4;
+  /* width: 80px */
+}
+
+.card:nth-of-type(3)::after {
+  font-weight: 900;
+  font-size: 4rem;
+  color: var(--color-primary-lightblue);
+  content: "03";
+  position: absolute;
+  top: -110px;
+  opacity: 0.4;
+  /* width: 80px */
+}
+
 }
 
 .card {
+  position: relative;
     flex-shrink: 1;
     width: 100%;
     padding: 2em;
     border-radius: 1em;
 
-    h2 {
-        font-size: 1rem;
+    h3 {
+        /* font-size: 1rem; */
+        margin-bottom: 3rem;
     }
 
     p {
@@ -198,53 +293,99 @@ height: 85vh;
     background-color: var( --color-primary-dark);
 }
 
+
+
 .card:nth-of-type(2) {
     color: #000;
     background-color: var(--color-primary-lightblue);
-
+    margin-top: 2em;
     h2 {
         color: #000;
     }
 }
 
+
 .card:nth-of-type(3) {
     color: #fff;
     background-color: var( --color-secondary-dark);
+    margin-top: 4em;
 }
 
 
-.cta-banner {
-    text-align: center;
+.cta-banner,
+.more-reasons {
+    /* text-align: center; */
     color: #000;
     background-color: #fff;
-    padding: 6em;
+    height: 100vh;
 
-    h3 {
-        font-size: clamp(1.5rem, calc(1rem + 2vw), 3rem);
-        color: var(--color-primary-lightblue);
+    .container,
+    .flex-container {
+      height: 100%;
     }
 
-    p {
-        margin-bottom: 3em;
+    .flex-container {
+      align-items: center;
+      justify-content: space-between;
+
+      & > {
+        flex-basis: 100%;
+      }
     }
+}
+
+.cta-banner .left-col p,
+.more-reasons .right-col p  {
+  margin: 2em 0px 3em;
+}
+
+.innovative-solutions {
+  color: #000;
+  background-color: var(--color-primary-lightblue);
+  padding-block: 6em;
+
+  .left-col,
+  .right-col {
+    flex-basis: 100%;
+  }
+
+  .left-col  {
+    margin-right: 12em;
+    border-right: 1px solid #cecece;
+  }
 }
 
 .how-we-work {
-        background-color: var(--color-primary-lightblue);
+        background-color: #fff;
         padding-block: 6em;
 
         h2 {
             text-align: center;
+            color: #000;
             margin-bottom: 2em;
         }
-
-        .card:nth-of-type(2) {
-    
-            background-color: #fff;
-
-        }
     }
-    
+
+
+  .more-reasons .left-col {
+    /* justify-self: flex-end; */
+    flex-basis: 55%;
+
+  }
+
+  .more-reasons .right-col {
+    flex-basis: 35%;
+  }
+
+
+.faq {
+  background-color: var( --color-primary-dark);
+}
+
+.faq .flex-container {
+  justify-content: center;
+  padding: 6em;
+}
 
 
 
@@ -262,7 +403,7 @@ height: 85vh;
       place-content: center;
       text-align: center;
       padding: 1.5rem;
-        
+
         height: 100%;
     }
 
@@ -287,7 +428,7 @@ height: 85vh;
       object-fit: cover;
     }
 
-    
+
 
 } */
 
