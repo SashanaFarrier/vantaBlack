@@ -10,7 +10,7 @@
         <p>Form submitted successfully!</p>
         <p>Thank you! Your request has been submitted successfully.</p>
         <p>We will reply to you soon!</p>
-        <RouterLink to="https://www.vbtechja.com">Go back</RouterLink>
+        <a href="/">Go back</a>
       </div>
 
     </div>
@@ -43,7 +43,12 @@
     margin-bottom: .5em;
   }
 
+  a {
+    font-weight: bold;
+  }
+
   a:hover {
+    color: var(--color-dark);
     opacity: 0.8;
   }
 </style>
