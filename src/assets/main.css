@@ -8,10 +8,8 @@
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: var(--color-background);
-  /* transition:
-    color 0.5s,
-    background-color 0.5s; */
+  background: var(--color-dark);
+  background: linear-gradient(90deg, rgba(8,4,17,1) 0%, rgba(65,78,210,1) 100%);
   line-height: 1.6;
   font-family:
     Inter,
@@ -32,6 +30,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin-bottom: 1em;
+}
+
 h1 {
   font-size: clamp(1rem, calc(1rem + 2vw), 3rem);
   text-transform: uppercase;
@@ -45,10 +58,12 @@ img {
 
 header {
   position: relative;
-    background-color: var(--color-primary-dark);
-    height: 10vh;
-    padding-inline: 1.5em !important;
-    transition: all 0.5s ease-in-out;
+  background: var(--color-dark);
+  background: linear-gradient(90deg, rgba(8,4,17,1) 0%, rgba(65,78,210,1) 100%);
+  height: 15vh;
+  padding-inline: 1.5em !important;
+  border-bottom: 1px solid var(--color-primary);;
+  transition: all 0.5s ease-in-out;
 }
 
 header > *,
@@ -58,12 +73,12 @@ header nav {
 
 header ul li a,
 footer ul li a {
-  color:  var(--color-primary-lightblue) !important;
+  color:  var(--color-accent) !important;
 }
 
 header ul li a:hover,
 footer ul li a:hover {
-  color: var(--color-primary-blue) !important;
+  color: var(--color-dark) !important;
 }
 
 ul {
@@ -83,6 +98,7 @@ ul li a {
 .logo a {
   display: block;
   width: 100%;
+  margin-bottom: 0px;
 }
 
 .cta-container .cta-btns {
@@ -93,8 +109,9 @@ ul li a {
 }
 
 footer {
-  /* padding-block: 2em; */
-  background-color: var(--color-primary-dark);
+  background: rgb(8,4,17);
+  background: linear-gradient(90deg, rgba(8,4,17,1) 0%, rgba(65,78,210,1) 100%);
+  border-top: 1px solid var(--color-primary);;
 }
 
 footer .logo {
@@ -110,41 +127,10 @@ footer .copyright-container {
   text-align: center;
   margin-top: 2em;
   padding: 1em;
-  background-color: var(--color-secondary-dark);
 }
 
-
-
-/* #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+@media screen and (min-width: 785px) {
+  header li a {
+    margin-bottom: 0px;
+  }
 }
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-} */
-
-/* @media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-} */
-
-/* @media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-} */

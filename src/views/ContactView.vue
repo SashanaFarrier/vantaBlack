@@ -1,7 +1,3 @@
-<script setup>
-  // import Footer from '@/components/Footer.vue';
-</script>
-
 <template>
   <main>
     <div class="contact-container">
@@ -31,36 +27,38 @@
           <form action="https://api.web3forms.com/submit" method="POST">
             <!-- Replace with your Access Key -->
             <input type="hidden" name="access_key" value="88f83081-4f27-4587-be2b-03c6fa6a44cf">
+            <input type="hidden" name="subject" value="New Inquiry Form Submission for Web3Forms" />
+            <input type="hidden" name="from_name" value="VantaBlack Technologies" />
 
             <!-- Form Inputs. Each input must have a name="" attribute -->
              <div class="row">
               <div class="col">
                 <label for="firstname">First name</label>
-              <input type="text" name="firstname" placeholder="John" required>
+                <input id="firstname" type="text" name="firstname" placeholder="John" required>
               </div>
               <div class="col">
                 <label for="lastname">Last name</label>
-                <input type="text" name="lastname" placeholder="Doe" required>
+                <input id="lastname" type="text" name="lastname" placeholder="Doe" required>
               </div>
              </div>
              <div class="row">
               <div class="col">
                 <label for="email">Email</label>
-                <input type="email" name="email" placeholder="Work or personal email" required>
+                <input ide="email" type="email" name="email" placeholder="Work or personal email" required>
               </div>
               <div class="col">
                 <label for="company">Company name</label>
-              <input type="text" name="company" placeholder="Ex. Microsoft" required>
+              <input id="company" type="text" name="company" placeholder="Ex. Microsoft">
               </div>
              </div>
              <div class="row">
               <div class="col">
                 <label for="website">Company website</label>
-              <input type="text" name="website" placeholder="www.yourcompany.com">
+                <input id="website" type="text" name="website" placeholder="www.yourcompany.com">
               </div>
               <div class="col">
-                <label for="service">What’s your inquiry?</label>
-                <select name="services" id="services">
+                <label for="inquiry">What’s your inquiry?</label>
+                <select id="inquiry" name="services" required>
                   <option value="" selected disabled>Please Select</option>
                   <option value="Web design & development">Web Design & Development</option>
                   <option value="Computer Repairs and Troubleshooting">Computer Repairs & Troubleshooting</option>
@@ -70,15 +68,14 @@
              </div>
              <div class="message-container">
               <label for="message">How can we help you?</label>
-              <textarea name="message" rows="10" placeholder="Tell us in detail about how we can help you." required></textarea>
+              <textarea id="mesage" name="message" rows="10" placeholder="Tell us in detail about how we can help you." required></textarea>
              </div>
             <!-- Honeypot Spam Protection -->
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
             <!-- Custom Confirmation / Success Page -->
             <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
-
-            <button type="submit">Submit Form</button>
+            <input type="hidden" name="redirect" value="https://vbtechja.com/thanks.html">
+            <button type="submit" class="btn">Submit Inquiry</button>
           </form>
         </div>
       </div>
@@ -88,12 +85,11 @@
 </template>
 <style scoped>
   main {
-    color: #000;
-    background-color: #CAF0F8;
+    color: rgb(223, 226, 252);
   }
 
-  h1 {
-    color: #007EA7;
+  h2 {
+    color: var(--color-accent);
   }
 
   form {
@@ -105,6 +101,7 @@
   }
 
   label {
+    color: #000;
     display: block;
   }
 
@@ -117,23 +114,17 @@
 
 
   button[type="submit"] {
-    font-weight: bold;
     text-transform: uppercase;
-    color:  var(--vt-c-white);
     padding: 1em 1.5em;
     margin-top: 2em;
     width: 100%;
-    background-color: var(--color-primary-dark);
-    border: 1px solid var(--color-primary-dark);
-    transition: all 500ms ease-in;
     cursor: pointer;
   }
 
-  button[type="submit"]:hover {
-  color: var(--color-primary-dark);
-  background-color: var(--vt-c-white);
-}
 
+.contact-container {
+  padding-bottom: 6em;
+}
 
   .contact-container__wrapper {
     display: flex;

@@ -1,148 +1,113 @@
 <script setup>
-    // import logo from '@/assets/logo.png'
-
-    // import webDevImg from '@/assets/website.png'
-    // import socialMediaImg from '@/assets/social-media.png'
-    // import computerRepairsImg from '@/assets/computer-repairs.png'
-    import abstractImg from '@/assets/icon-1.png'
-    import targetIcon from '@/assets/target-icon.png'
-    import { onMounted } from "vue"
-    import { gsap } from "gsap";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    onMounted(() => {
-        // let screenSize = gsap.matchMedia();
-        //const textContents = gsap.utils.toArray(".text-content text")
-        // const imgEls = gsap.utils.toArray(".img")
-        //const colors = ["red", "grey", "pink"]
-
-        // screenSize.add("(min-width: 900px)", () => {
-    //         imgEls.forEach((el, index) => el.style.zIndex = imgEls.length - index)
-
-    //         gsap.set(".img", {
-    //             clipPath: () => "inset(0px 0px 0px 0px)"
-    //         })
-
-    //         const animation = gsap.to(".img:not(:last-child)", {
-    //             clipPath: () => "inset(100% 0px 0px 0px)",
-    //             stagger: 0.5,
-    //             ease: "none"
-    //         })
-
-    //         ScrollTrigger.create({
-    //             trigger: ".grid-container",
-    //             start: "top top",
-    //             end: "bottom bottom",
-    //             scrub: 1,
-    //             animation: animation
-    //         })
-    // })
-
-
-});
-
-
+    import shapes from '@/assets/shapes.png'
+    import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 </script>
 
 <template>
-    <div class="hero">
+  <div class="hero">
     <div class="container">
-      <div class="hero-container__content">
-        <h1>Your All-in-One Digital Solution</h1>
-        <p>At VantaBlack Technologies, we help businesses and individuals thrive in the digital world. Whether you need a stunning website, effective social media strategies, or reliable tech support, we've got you covered!</p>
-        <RouterLink to="/contact" class="cta-btn">Contact us</RouterLink>
+      <div class="hero__content">
+        <div class="hero__container | flex-container align-items-center justify-content-between">
+        <div class="left-col">
+          <h1>Your All-in-One Digital Solution</h1>
+          <p>At VantaBlack Technologies, we help businesses and individuals thrive in the digital world. Whether you need a stunning website, effective social media strategies, or reliable tech support, we've got you covered!</p>
+          <RouterLink to="/contact" class="btn">Contact us</RouterLink>
+        </div>
+        <div class="right-col">
+          <img :src="shapes" alt="">
+        </div>
+      </div>
+      <div class="features">
+          <div class="features__container | flex-container justify-content-between">
+            <div class="feature | border-outline">
+              <h2>Comprehensive Services</h2>
+              <p>From website development to computer repairs, we handle it all.</p>
+            </div>
+            <div class="feature | border-outline">
+              <h2> Custom Solutions</h2>
+              <p>Tailored services that fit your unique needs.</p>
+            </div>
+            <div class="feature | border-outline">
+              <h2>Affordable Pricing</h2>
+              <p>High-quality service without the premium price tag.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-    <main>
-        <!-- <div class="spacer"></div> -->
-        <section class="services">
-            <div class="cards-container">
-            <div class="card">
-                <font-awesome-icon icon="globe" />
-                <h2>Web Development</h2>
-                <p>Get a modern, responsive, and high-performing website tailored to your brand. Whether it's a business site, e-commerce store, or portfolio, we build it right.</p>
-                <RouterLink to="/services">Learn More</RouterLink>
+  <main>
+    <section class="cta-section | bg-solid">
+      <div class="container">
+        <div class="banner">
+          <h2>Let’s Build, Grow & Fix Together!</h2>
+          <p>Your digital success starts here. Whether you need a website that stands out, social media that engages, or tech support that keeps you running, we’re ready to help. Let’s turn your vision into reality! </p>
+        </div>
+        <div class="cards">
+          <div class="cards__container | flex-container justify-content-between">
+            <div class="card | border-outline">
+              <div class="text-content">
+                <div class="icon">
+                  <FontAwesomeIcon :icon="['fas', 'globe']" />
+                </div>
+                  <h3>Web Development</h3>
+                  <p>Get a modern, responsive, and high-performing website tailored to your brand. Whether it's a business site, e-commerce store, or portfolio, we build it right.</p>
+                </div>
+                  <RouterLink to="/services" class="btn">Learn More</RouterLink>
+              </div>
+              <div class="card | border-outline">
+                <div class="text-content">
+                  <div class="icon">
+                    <FontAwesomeIcon :icon="['fas', 'heart']" />
+                  </div>
+                  <h2>Social Media Management</h2>
+                  <p>Elevate your online presence with engaging content, audience growth strategies, and expert social media management. Let’s turn likes into leads!</p>
+                </div>
+                  <RouterLink to="/services" class="btn">Learn More</RouterLink>
             </div>
-            <div class="card">
-                <h2>Social Media Management</h2>
-                <p>Elevate your online presence with engaging content, audience growth strategies, and expert social media management. Let’s turn likes into leads!</p>
-                <RouterLink to="/services">Learn More</RouterLink>
-            </div>
-            <div class="card">
+            <div class="card | border-outline">
+              <div class="text-content">
+                <div class="icon">
+                  <FontAwesomeIcon :icon="['fas', 'computer']" />
+                </div>
                 <h2> Computer Repairs & Troubleshooting</h2>
                 <p>Is your computer slow, glitching, or refusing to turn on? Our tech experts diagnose and fix issues fast, so you can get back to work.</p>
-                <RouterLink to="/services">Learn More</RouterLink>
+              </div>
+                <RouterLink to="/services" class="btn">Learn More</RouterLink>
             </div>
-
+            </div>
         </div>
-        </section>
-
-        <section class="cta-banner">
-            <div class="container">
-              <div class="flex-container">
-                <div class="left-col">
-                  <h3>Let’s Build, Grow & Fix Together!</h3>
-                <p>Your digital success starts here. Whether you need a website that stands out, social media that engages, or tech support that keeps you running, we’re ready to help. Let’s turn your vision into reality—get in touch today! </p>
-                <RouterLink to="/contact" class="cta-btn">Contact us</RouterLink>
-                </div>
-                <div class="right-col">
-                  <img :src="targetIcon" alt="">
-                </div>
-              </div>
-            </div>
-        </section>
-        <section class="innovative-solutions">
-          <div class="container">
-            <div class="flex-container">
-              <div class="left-col">
-                <h3>Innovative Solutions, <br> Seamless Experiences </h3>
-              </div>
-              <div class="right-col">
-                <p>Discover the expertise and passion behind VantaBlack Technologies as we bring cutting-edge web development, social media management and computer solutions from concept to reality.</p>
-              </div>
-            </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="how-we-work">
+          <h2>How We Work</h2>
+          <p>Get the digital solutions you need without the hassle. <strong>Free consultations</strong> included.</p>
+          <div class="list-items">
+            <ol>
+              <li class="border-outline">
+                <h3>Consultations</h3>
+                <p>We take the time to understand your goals, challenges, and requirements to craft the best solution for your business.</p>
+              </li>
+              <li class="border-outline">
+                <h3>Strategy & Planning</h3>
+                <p>Whether it's a website, social media strategy, or computer troubleshooting, we develop a tailored approach to meet your needs.</p>
+              </li>
+              <li class="border-outline">
+                <h3>Execution</h3>
+                <p>Our team applies expertise and cutting-edge technology to bring your vision to life, ensuring efficiency, performance, and reliability.</p>
+              </li>
+            </ol>
           </div>
-        </section>
-        <section class="how-we-work">
-          <div class="container">
-            <h3>How We Work</h3>
-            <div class="cards-container">
-                <div class="card">
-                    <h4>Consultation</h4>
-                    <p>We take the time to understand your goals, challenges, and requirements to craft the best solution for your business.</p>
-                </div>
-                <div class="card">
-                    <h4>Strategy & Planning</h4>
-                    <p>Whether it's a website, social media strategy, or computer troubleshooting, we develop a tailored approach to meet your needs.</p>
-                </div>
-                <div class="card">
-                    <h4>Execution</h4>
-                    <p>Our team applies expertise and cutting-edge technology to bring your vision to life, ensuring efficiency, performance, and reliability.</p>
-                </div>
-            </div>
-          </div>
-        </section>
-        <section class="more-reasons">
-            <div class="container">
-              <div class="flex-container">
-                <div class="left-col">
-                  <img :src="abstractImg" alt="">
-                </div>
-                <div class="right-col">
-                  <h3>More Reasons to Simplify Tech for Your Business</h3>
-                <p>Get the digital solutions you need without the hassle. Free consultations included.</p>
-                <RouterLink to="/contact" class="cta-btn">Contact us</RouterLink>
-                </div>
-              </div>
-            </div>
-        </section>
-        <section class="faq">
+        </div>
+      </div>
+    </section>
+    <section class="faq">
           <div class="container">
             <div class="flex-container">
               <div class="text-content">
+                <h2>Frequently Asked Questions</h2>
               <details>
                 <summary>How do I get started with a website or tech service?</summary>
                 <p>Simply contact us through our form, and we’ll schedule a free consultation to discuss your needs and recommend the best solution.</p>
@@ -167,269 +132,222 @@
                 <summary>What if I need a custom solution not listed on your website?</summary>
                 <p>We can create custom tech solutions tailored to your needs! Contact us, and we’ll discuss the best approach for your project.</p>
               </details>
-
             </div>
             </div>
           </div>
         </section>
-    </main>
+  </main>
 </template>
 
 <style scoped>
 
   h2 {
-    font-size: clamp(1rem, calc(1rem + 2vw), 3rem);
-    text-transform: uppercase;
     line-height: 1.2;
-    color: #fff;
   }
 
-  h3 {
-        font-size: clamp(1.5rem, calc(1rem + 2vw), 3rem);
-        /* color: var(--color-primary-lightblue); */
-        line-height: 1.2;
-    }
-
-  main {
-    /* height: 100vh; */
-
-  }
-
-  .flex-container {
-    display: flex;
+  section {
+    padding-block: 4em;
+    background: rgb(8,4,17);
+    background: linear-gradient(90deg, rgba(8,4,17,1) 0%, rgba(65,78,210,1) 100%);
   }
 
   .hero {
-display: flex;
-flex-direction: column;
-justify-content: center;
-background-color: #007EA7;
-background-image: url(/src/assets/home-banner.png);
-background-repeat: no-repeat;
-background-size: cover;
-background-blend-mode:soft-light;
-height: 85vh;
+    padding-block: 4em;
+    background: rgb(8,4,17);
+    background: linear-gradient(90deg, rgba(8,4,17,1) 0%, rgba(65,78,210,1) 100%);
 
-  .hero-container__content {
-    max-width: 50ch;
-    p {
-        margin: 2em 0px 4em;
-    }
-  }
-}
+    .hero__container {
+      gap: 4em;
 
-.services {
-    padding: 2em;
-    background-color: #007EA7;
-    padding-top: 0px;
-}
-
-.cards-container {
-    display: flex;
-    gap: 1em;
-
-}
-
-.how-we-work {
-  h3 {
-     color: #000;
-     margin-bottom: 3em;
-  }
-
-  .card:nth-of-type(1)::after {
-  font-weight: 900;
-  font-size: 4rem;
-  color: var(--color-primary-lightblue);
-  content: "01";
-  position: absolute;
-  top: -110px;
-  opacity: 0.4;
-  /* width: 80px */
-}
-
-  .card:nth-of-type(2)::after {
-  font-weight: 900;
-  font-size: 4rem;
-  color: var(--color-primary-lightblue);
-  content: "02";
-  position: absolute;
-  top: -110px;
-  opacity: 0.4;
-  /* width: 80px */
-}
-
-.card:nth-of-type(3)::after {
-  font-weight: 900;
-  font-size: 4rem;
-  color: var(--color-primary-lightblue);
-  content: "03";
-  position: absolute;
-  top: -110px;
-  opacity: 0.4;
-  /* width: 80px */
-}
-
-}
-
-.card {
-  position: relative;
-    flex-shrink: 1;
-    width: 100%;
-    padding: 2em;
-    border-radius: 1em;
-
-    h3 {
-        /* font-size: 1rem; */
-        margin-bottom: 3rem;
-    }
-
-    p {
-        margin: 1em 0px 2em;
-    }
-}
-
-.card:nth-of-type(1) {
-    color: #fff;
-    background-color: var( --color-primary-dark);
-}
-
-
-
-.card:nth-of-type(2) {
-    color: #000;
-    background-color: var(--color-primary-lightblue);
-    margin-top: 2em;
-    h2 {
-        color: #000;
-    }
-}
-
-
-.card:nth-of-type(3) {
-    color: #fff;
-    background-color: var( --color-secondary-dark);
-    margin-top: 4em;
-}
-
-
-.cta-banner,
-.more-reasons {
-    /* text-align: center; */
-    color: #000;
-    background-color: #fff;
-    height: 100vh;
-
-    .container,
-    .flex-container {
-      height: 100%;
-    }
-
-    .flex-container {
-      align-items: center;
-      justify-content: space-between;
-
-      & > {
-        flex-basis: 100%;
+      .btn {
+          margin-top: 2em;
       }
     }
-}
 
-.cta-banner .left-col p,
-.more-reasons .right-col p  {
-  margin: 2em 0px 3em;
-}
+    .container,
+    .hero__content {
+      height: 100%;
+      }
 
-.innovative-solutions {
-  color: #000;
-  background-color: var(--color-primary-lightblue);
-  padding-block: 6em;
+      .hero__content {
+        display: grid;
+        place-content: center;
+      }
 
-  .left-col,
-  .right-col {
-    flex-basis: 100%;
+      .features {
+        margin-top: 4em;
+      }
   }
 
-  .left-col  {
-    margin-right: 12em;
-    border-right: 1px solid #cecece;
+  .hero .flex-container,
+  .cta-section .flex-container,
+  .how-we-work ol {
+    flex-direction: column;
   }
-}
 
-.how-we-work {
-        background-color: #fff;
-        padding-block: 6em;
+  .cta-section .cards__container,
+    .how-we-work .list-items {
+      margin-top: 3em;
+    }
 
-        h2 {
-            text-align: center;
-            color: #000;
-            margin-bottom: 2em;
+  .cta-section .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .text-content {
+      flex-grow: 2;
+    }
+
+    .btn {
+      margin-inline: auto;
+    }
+  }
+
+  .cta-section,
+  .how-we-work {
+    text-align: center;
+  }
+
+  .feature h2 {
+    font-weight: 900;
+    margin-bottom: .25em;
+  }
+
+  .banner,
+  .how-we-work > p {
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .banner p {
+    max-width: 60ch;
+    margin-inline: auto;
+  }
+
+  .how-we-work h2,
+  .how-we-work > p,
+  .faq h2 {
+    text-align: center;
+  }
+
+  .how-we-work ol {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+  }
+
+  .cards__container {
+    gap: 2em;
+  }
+
+  .faq {
+    padding-bottom: 6em;
+    background-color: var( --color-primary-dark);
+
+    h2 {
+      margin-bottom: 2em;
+    }
+
+    .flex-container {
+      justify-content: center;
+    }
+
+    details {
+      padding: 2em;
+      width: 100%;
+      max-width: 900px;
+      border: 1px solid var( --color-accent);
+
+      summary {
+        font-weight: bold;
+        margin-bottom: .5em;
+        cursor: pointer;
         }
     }
-
-
-  .more-reasons .left-col {
-    /* justify-self: flex-end; */
-    flex-basis: 55%;
-
   }
 
-  .more-reasons .right-col {
-    flex-basis: 35%;
+  @media screen and (min-width: 700px) {
+    .faq summary {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    .hero .flex-container,
+    .how-we-work ol {
+      flex-direction: row;
+  }
+
+    .how-we-work ol {
+      gap: 1em;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .cta-section .flex-container {
+      flex-direction: row;
+  }
+
+    .hero {
+      height: 85vh;
+    }
+
+    .cta-section {
+      min-height: 100vh;
+
+      .cards__container {
+        margin-top: 6em
+      }
+    }
+
+    .banner {
+      font-size: 2rem;
+    }
+
+    .how-we-work h2,
+    .how-we-work > p,
+    .faq h2 {
+      font-size: 3rem;
+    }
   }
 
 
-.faq {
-  background-color: var( --color-primary-dark);
-}
-
-.faq .flex-container {
-  justify-content: center;
-  padding: 6em;
-}
 
 
 
-/* @media screen and (min-width: 900px) {
-    .grid-container {
-        grid-template-columns: 1fr 2fr;
-    }
-
-    .left-col-wrapper {
-        height: 100vh;
-    }
-
-    .left-col-wrapper__body {
-      display: grid;
-      place-content: center;
-      text-align: center;
-      padding: 1.5rem;
-
-        height: 100%;
-    }
-
-     .right-col-wrapper {
-        display: flex;
-        flex-direction: column;
-        position: sticky;
-        top: 0;
-        width: 100%;
-        height: 100vh;
-    }
-
-
-    .images-container .img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-
-    .images-container img {
-      height: 100%;
-      object-fit: cover;
-    }
 
 
 
-} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </style>

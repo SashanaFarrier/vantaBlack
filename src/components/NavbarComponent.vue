@@ -11,6 +11,10 @@
       isActive.value = !isActive.value;
     }
 
+    function closeNavigationMenu() {
+      isActive.value = false;
+    }
+
 </script>
 
 <template>
@@ -27,16 +31,12 @@
                 <div @click="toggleNavigationMenu" class="close-btn" :class="isActive ? 'active' : ''">
                     <img :src="closeIcon" alt="navigation close button" width="50" height="50">
                 </div>
-                <!-- <ul class="list-items left">
-                    <li><RouterLink to="/about">About Us</RouterLink></li>
-                    <li><a href="/services">Services</a></li>
-                </ul> -->
                 <ul class="list-items right">
-                  <li><RouterLink to="/">Home</RouterLink></li>
-                  <li><RouterLink to="/about">About Us</RouterLink></li>
-                  <li><RouterLink to="/services">Services</RouterLink></li>
+                  <li><RouterLink to="/" @click="closeNavigationMenu">Home</RouterLink></li>
+                  <li><RouterLink to="/about" @click="closeNavigationMenu">About Us</RouterLink></li>
+                  <li><RouterLink to="/services" @click="closeNavigationMenu">Services</RouterLink></li>
                     <!-- <li><a href="/pricing">Pricing</a></li> -->
-                  <li><RouterLink to="/contact" class="accent-btn">Contact Us</RouterLink></li>
+                  <li><RouterLink to="/contact" class="accent-btn" @click="closeNavigationMenu">Contact Us</RouterLink></li>
                 </ul>
             </div>
         </nav>
@@ -50,13 +50,15 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* width: 100%; */
-}
 
-nav > ul {
-    display: none;
-}
+    ul {
+      display: none;
+    }
 
+    a {
+      font-weight: bold;
+    }
+}
 
 .navigation-list {
     display: none;
@@ -74,7 +76,8 @@ nav > ul {
     width: 100%;
     height: 100vh;
     padding: 1em;
-    background-color: #0D1B2A;
+    background: rgb(8,4,17);
+    background: linear-gradient(90deg, rgba(8,4,17,1) 0%, rgba(65,78,210,1) 100%);
     z-index: 1000;
 }
 
@@ -82,27 +85,28 @@ nav > ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    /* height: 100%; */
-    height: max-content;
+    height: 100%;
     transition: width, height 0.5s ease-in-out;
-}
-
-.list-items {
-    /* width: 0px;
-    height: 0px; */
 }
 
 .navigation-list .close-btn {
     display: none;
     text-align: right;
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+}
+
+.navigation-list .close-btn:hover {
+    opacity: 0.5;
 }
 
 .navigation-list .close-btn > img{
     max-width: 50px;
 }
 
-.list-items li {
+header .list-items li {
     font-size: 2rem !important;
     margin-top: 1em;
 }
@@ -116,7 +120,7 @@ ul li {
     cursor: pointer;
 }
 
-@media screen and (min-width: 49.0625em){
+@media screen and (min-width: 53.125em){
     .hamburger-menu,
     .close-btn {
         display: none;
@@ -139,9 +143,9 @@ ul li {
         gap: 2em;
     }
 
-    .list-items li {
-        font-size: 1rem !important;
-        margin-top: 0;
+    header .list-items li {
+        font-size: 1.2rem !important;
+        margin-top: 0px;
     }
 
 }

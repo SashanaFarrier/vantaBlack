@@ -37,8 +37,16 @@ const router = createRouter({
       path: '/portfolio',
       name: 'portfolio',
       component: () => import('../views/Portfolio.vue')
+    },
+    {
+      path: '/thanks',
+      name: 'thanks',
+      component: () => import('../views/ThanksView.vue')
     }
   ],
+  scrollBehavior() {
+    return { top: 0 };
+  }
 })
 
 export default router

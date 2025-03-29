@@ -23,7 +23,7 @@
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-white);
+  /* --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
 
@@ -33,14 +33,14 @@
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
 
-  --section-gap: 160px;
+  --section-gap: 160px; */
 }
 
 :root {
-  --color-primary-blue: #007EA7;
-  --color-primary-lightblue: #CAF0F8;
-  --color-primary-dark: #0D1B2A;
-  --color-secondary-dark: #00509D;
+  --color-primary: #414ed2;
+  --color-light: rgb(223, 226, 252);
+  --color-dark: rgb(8,4,17);
+  --color-accent: rgb(163, 171, 243);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -73,51 +73,41 @@
   margin-inline: auto;
 }
 
-.text-center-mx-width {
-  text-align: center;
-  max-width: 80ch;
-  margin-inline: auto;
-}
-
-.accent-btn {
-  font-weight: bold;
-  color:  var(--color-primary-dark) !important;
-  padding: 0.5em 1em;
-  background-color: var(--color-primary-lightblue);
-}
-
-.accent-btn:hover {
-  background-color: var(--color-primary-dark);
-  color: var(--color-primary-lightblue) !important;
-}
-
-.cta-btn {
+.btn {
   font-weight: bold;
   text-decoration: none;
   color:  var(--vt-c-white);
-  justify-self: center;
-  padding: 1em 1.5em;
-  background-color: var(--color-primary-dark);
-  transition: all 500ms ease-in;
+  padding: 0.5em 1em;
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-primary);
+  border-radius: 100vw;
+  transition: all 500ms ease-in-out;
 }
 
-.cta-btn:hover {
-  color: var(--color-primary-dark);
-  background-color: var(--vt-c-white);
+.btn:hover {
+  border: 1px solid var(--color-dark);
+  opacity: 0.8;
 }
 
-.outline-btn {
-  color: var(--color-primary-dark);
-  background-color: transparent !important;
-  border: 1px solid var(--color-primary-dark);
-  transition: all 300ms ease-in;
+.flex-container {
+  display: flex;
 }
 
-.outline-btn:hover {
-  border-color: var(--color-primary-lightblue);
-  background-color: var(--vt-c-white);
+.align-items-center {
+  align-items: center;
 }
 
-  
+.justify-content-between {
+  justify-content: space-between;
+}
 
+.bg-solid {
+  background: var(--color-dark);
+}
+
+.border-outline
+{
+  padding: 1em 2em;
+  border: 1px solid var(--color-primary);;
+}
 
