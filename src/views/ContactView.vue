@@ -74,7 +74,7 @@
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <!-- Custom Confirmation / Success Page -->
             <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
-            <input type="hidden" name="redirect" value="https://vbtechja.com/thanks.html">
+            <input type="hidden" name="redirect" value="https://vbtechja.com/thanks">
             <button type="submit" class="btn">Submit Inquiry</button>
           </form>
         </div>
