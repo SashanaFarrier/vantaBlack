@@ -25,12 +25,9 @@
         </div>
         <div class="right-col">
           <form action="https://api.web3forms.com/submit" method="POST">
-            <!-- Replace with your Access Key -->
             <input type="hidden" name="access_key" value="88f83081-4f27-4587-be2b-03c6fa6a44cf">
             <input type="hidden" name="subject" value="New Inquiry Form Submission for Web3Forms" />
             <input type="hidden" name="from_name" value="VantaBlack Technologies" />
-
-            <!-- Form Inputs. Each input must have a name="" attribute -->
              <div class="row">
               <div class="col">
                 <label for="firstname">First name</label>
@@ -73,7 +70,6 @@
             <!-- Honeypot Spam Protection -->
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <!-- Custom Confirmation / Success Page -->
-            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
             <input type="hidden" name="redirect" value="https://vbtechja.com/thanks">
             <button type="submit" class="btn">Submit Inquiry</button>
           </form>
