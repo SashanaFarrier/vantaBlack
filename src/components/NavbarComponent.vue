@@ -120,7 +120,11 @@ ul li {
     cursor: pointer;
 }
 
-@media screen and (min-width: 53.125em){
+@media screen and (min-width: 53.125em) {
+  ul li {
+    margin-right: 0px;
+  }
+
     .hamburger-menu,
     .close-btn {
         display: none;

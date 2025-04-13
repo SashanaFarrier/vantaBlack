@@ -39,7 +39,7 @@
 :root {
   --color-primary: #414ed2;
   --color-light: rgb(223, 226, 252);
-  --color-dark: rgb(8,4,17);
+  --color-dark: rgb(8, 4, 17);
   --color-accent: rgb(163, 171, 243);
 }
 
@@ -77,7 +77,7 @@
   font-weight: bold;
   text-decoration: none;
   color:  var(--vt-c-white);
-  padding: 0.5em 1em;
+  padding: 0.7em 1.5em;
   background-color: var(--color-dark);
   border: 1px solid var(--color-primary);
   border-radius: 100vw;

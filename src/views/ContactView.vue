@@ -99,12 +99,12 @@ const validateField = (field) => {
             </li>
             <li>
               <img src="" alt="">
-              <h2>Custom Digital Solutions Tailored for You</h2>
+              <h3>Custom Digital Solutions Tailored for You</h3>
               <p>Tell us about your business needs, and we'll provide a customized strategy that aligns with your goals. We work closely with you to ensure the best results.</p>
             </li>
             <li>
               <img src="" alt="">
-              <h2>Seamless Project Execution</h2>
+              <h3>Seamless Project Execution</h3>
               <p>From concept to completion, we ensure a smooth and hassle-free experience. Our team manages each step efficiently, so you can focus on growing your business with confidence.</p>
             </li>
           </ul>
@@ -173,8 +173,13 @@ const validateField = (field) => {
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <!-- Custom Confirmation / Success Page -->
             <!-- <input type="hidden" name="redirect" value="https://vbtechja.com/thanks"> -->
-            <button type="submit" class="btn">Submit Inquiry</button>
+            <button type="submit" class="btn">Submit</button>
           </form>
+          <div class="contact-info">
+            <p><span> <FontAwesomeIcon :icon="['fas', 'location-dot']" /></span>Manchester, Jamaica</p>
+            <p><span> <FontAwesomeIcon :icon="['fas', 'phone']" /></span>876-545-9806</p>
+            <p><span> <FontAwesomeIcon :icon="['fas', 'message']" /></span>vbtechnologies876@gmail.com</p>
+          </div>
         </div>
       </div>
     </div>
@@ -190,12 +195,33 @@ const validateField = (field) => {
     color: var(--color-accent);
   }
 
-  form {
+  form,
+  .contact-info {
     padding: 2em;
-    height: 100%;
+    /* height: 100%; */
     background-color: #fff;
     border-radius: .25vw;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .contact-info {
+    font-weight: bold;
+    font-size: clamp(.8rem, calc(.8rem + .25vw), 3rem);
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    background-color: var(--color-accent);
+    p {
+      margin-bottom: .5em;
+    }
+    span {
+
+      /* color: var(--color-accent); */
+     margin-right: .5em;
+    }
   }
 
   label {
@@ -249,6 +275,8 @@ const validateField = (field) => {
   .col {
     width: 100%;
   }
+
+  /* email validation */
 
   .error {
     font-size: 0.8rem;

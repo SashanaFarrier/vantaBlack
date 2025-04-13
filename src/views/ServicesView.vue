@@ -20,7 +20,7 @@
             <div class="icon">
               <FontAwesomeIcon :icon="['fas', 'globe']" />
             </div>
-            <h2>Website Design & Hosting</h2>
+            <h3>Website Design & Hosting</h3>
             <p>Your website is your digital storefront, and we make sure it stands out. Whether you need a simple portfolio, an eCommerce store, or a custom-coded site, we’ve got you covered. Our hosting solutions ensure speed, security, and reliability.</p>
             <ul>
               <li>WordPress | Wix | Squarespace | Shopify | Custom Code</li>
@@ -30,21 +30,21 @@
           </li>
           <li class="border-outline">
             <div class="icon">
-              <FontAwesomeIcon :icon="['fas', 'heart']" />
+              <FontAwesomeIcon :icon="['fas', 'mobile-screen']" />
             </div>
-            <h2>Social Media Content Creation</h2>
+            <h3>Google AppSheet Development</h3>
             <p>Stay ahead with professional social media content that captures attention and drives engagement. Using Canva, we design custom posts that align with your brand and marketing goals.</p>
             <ul>
-              <li>Custom graphics and promotional posts</li>
-              <li>Engaging content for Facebook, Instagram, and more</li>
-              <li>Brand-consistent templates and visuals</li>
+              <li>Custom business applications for inventory, CRM, or task management.</li>
+              <li>Workflow automation and process optimization.</li>
+              <li>Integration with Google Workspace and other tools.</li>
             </ul>
           </li>
           <li class="border-outline">
             <div class="icon">
               <FontAwesomeIcon :icon="['fas', 'computer']" />
             </div>
-            <h2>Computer Repairs & Troubleshooting</h2>
+            <h3>Computer Repairs & Troubleshooting</h3>
             <p>Tech issues slowing you down? We provide expert computer repairs and troubleshooting services, ensuring your devices perform at their best.</p>
             <ul>
               <li>Hardware and software repairs</li>
