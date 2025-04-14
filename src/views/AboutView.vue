@@ -24,7 +24,7 @@
               <div class="who-we-are | flex-container">
                 <div class="left-col">
                   <h2>Who We Are</h2>
-                  <p>At VantaBlack Technologies, we turn ideas into reality through expert web development, cutting-edge tech solutions, and reliable support. Based in Manchester, Jamaica, we were founded in 2025 out of a passion for programming, computer hardware, and software.</p>
+                  <p>VantaBlack Technologies is your go-to digital partner for smart, modern tech solutions. Founded in 2025, we’re driven by a deep passion for programming, computer hardware, and software. From building sleek websites to solving everyday tech challenges, we bring ideas to life with skill and purpose.</p>
                 </div>
                 <div class="right-col">
                   <img :src="abstractImg" alt="">

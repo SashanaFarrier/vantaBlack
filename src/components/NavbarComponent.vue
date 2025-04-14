@@ -35,7 +35,7 @@
                   <li><RouterLink to="/" @click="closeNavigationMenu">Home</RouterLink></li>
                   <li><RouterLink to="/about" @click="closeNavigationMenu">About Us</RouterLink></li>
                   <li><RouterLink to="/services" @click="closeNavigationMenu">Services</RouterLink></li>
-                    <!-- <li><a href="/pricing">Pricing</a></li> -->
+                  <li><RouterLink to="/pricing" @click="closeNavigationMenu">Pricing</RouterLink></li>
                   <li><RouterLink to="/contact" class="accent-btn" @click="closeNavigationMenu">Contact Us</RouterLink></li>
                 </ul>
             </div>

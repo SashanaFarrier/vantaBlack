@@ -13,8 +13,7 @@
         <div class="hero__container | flex-container align-items-center justify-content-between">
         <div class="left-col">
           <h1>Your All-in-One Digital Solution</h1>
-          <!-- <p>At VantaBlack Technologies, we help businesses and individuals thrive in the digital world. Whether you need a stunning website, effective social media strategies, or reliable tech support, we've got you covered!</p> -->
-          <p>At VantaBlack Technologies, we help businesses and individuals thrive in the digital world. Whether you need a stunning website, an inventory app using Google AppSheet, or reliable tech support, we've got you covered!</p>
+          <p>At VantaBlack Technologies, we empower small businesses, startups, and individuals to succeed online. From custom websites and no-code AppSheet apps to expert tech support, we provide smart, tailored solutions that work.</p>
           <RouterLink to="/contact" class="btn">Contact us</RouterLink>
         </div>
         <div class="right-col">
@@ -46,7 +45,7 @@
       <div class="container">
         <div class="banner">
           <h2>Let’s Build, Grow & Fix Together!</h2>
-          <p>Your digital success starts here. Whether you need a website that stands out, social media that engages, or tech support that keeps you running, we’re ready to help. Let’s turn your vision into reality! </p>
+          <p>Ready to level up your digital game? Whether it’s creating a standout website, building a Google AppSheet app to streamline your workflow, or providing reliable tech support to keep you running—we’re ready to help. Let’s turn your vision into reality!</p>
         </div>
         <div class="cards">
           <div class="cards__container | flex-container justify-content-between">
@@ -58,7 +57,7 @@
                   <h3>Web Development</h3>
                   <p>Get a modern, responsive, and high-performing website tailored to your brand. Whether it's a business site, e-commerce store, or portfolio, we build it right.</p>
                 </div>
-                  <RouterLink to="/services" class="btn">Learn More</RouterLink>
+                  <RouterLink to="/services#services" class="btn">Learn More</RouterLink>
               </div>
               <div class="card | border-outline">
                 <div class="text-content">
@@ -68,7 +67,7 @@
                   <h3>Google AppSheet Development</h3>
                   <p>Ideal for businesses looking to automate processes without complex coding.</p>
                 </div>
-                  <RouterLink to="/services" class="btn">Learn More</RouterLink>
+                  <RouterLink to="/services#services" class="btn">Learn More</RouterLink>
             </div>
             <div class="card | border-outline">
               <div class="text-content">
@@ -78,7 +77,7 @@
                 <h3> Computer Repairs & Troubleshooting</h3>
                 <p>Is your computer slow, glitching, or refusing to turn on? Our tech experts diagnose and fix issues fast, so you can get back to work.</p>
               </div>
-                <RouterLink to="/services" class="btn">Learn More</RouterLink>
+                <RouterLink to="/services#services" class="btn">Learn More</RouterLink>
             </div>
             </div>
         </div>
@@ -146,8 +145,8 @@
                 <p>Yes! We provide monthly maintenance services to keep your website running smoothly.</p>
               </details>
               <details>
-                <summary>What social media platforms do you manage?</summary>
-                <p>We manage Facebook and Instagram but can handle other platforms upon request.</p>
+                <summary>What kind of apps can you build with Google AppSheet?</summary>
+                <p>We create custom no-code apps tailored to your needs—whether it's for inventory management or workflow automation. If you have a process, we can help you digitize it with AppSheet.</p>
               </details>
               <details>
                 <summary>What if I need a custom solution not listed on your website?</summary>
@@ -403,6 +402,7 @@
 
       .flex-container {
         flex-direction: row;
+        justify-content: space-between;
       }
 
       h2 {

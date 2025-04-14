@@ -1,6 +1,7 @@
 <script setup>
   import CTA from '@/components/CTA.vue';
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
 </script>
 
 <template>
@@ -12,7 +13,7 @@
       </div>
     </div>
   </div>
-  <main>
+  <main id="services">
     <div class="container">
       <div class="services-container">
         <ul>
@@ -21,36 +22,45 @@
               <FontAwesomeIcon :icon="['fas', 'globe']" />
             </div>
             <h3>Website Design & Hosting</h3>
-            <p>Your website is your digital storefront, and we make sure it stands out. Whether you need a simple portfolio, an eCommerce store, or a custom-coded site, we’ve got you covered. Our hosting solutions ensure speed, security, and reliability.</p>
-            <ul>
-              <li>WordPress | Wix | Squarespace | Shopify | Custom Code</li>
-              <li>Fully responsive and optimized for all devices</li>
-              <li>SEO-friendly designs to help you get found online</li>
-            </ul>
+            <div class="text-content">
+              <p>Your website is your digital storefront, and we make sure it stands out. Whether you need a simple portfolio, an eCommerce store, or a custom-coded site, we’ve got you covered. Our hosting solutions ensure speed, security, and reliability.</p>
+              <ul>
+                <li>WordPress | Wix | Squarespace | Shopify | Custom Code</li>
+                <li>Fully responsive and optimized for all devices</li>
+                <li>SEO-friendly designs to help you get found online</li>
+              </ul>
+              <RouterLink to="/pricing#web-development" class="btn btn-accent">View Pricing</RouterLink>
+            </div>
           </li>
           <li class="border-outline">
             <div class="icon">
               <FontAwesomeIcon :icon="['fas', 'mobile-screen']" />
             </div>
             <h3>Google AppSheet Development</h3>
-            <p>Stay ahead with professional social media content that captures attention and drives engagement. Using Canva, we design custom posts that align with your brand and marketing goals.</p>
-            <ul>
-              <li>Custom business applications for inventory, CRM, or task management.</li>
-              <li>Workflow automation and process optimization.</li>
-              <li>Integration with Google Workspace and other tools.</li>
-            </ul>
+            <div class="text-content">
+              <p>Stay ahead with custom no-code solutions that simplify and automate your business processes. We build Google AppSheet apps tailored to your workflow—whether it’s for tracking inventory or streamlining data collection—no coding required.</p>
+              <ul>
+                <li>Custom business applications for inventory, CRM, or task management.</li>
+                <li>Workflow automation and process optimization.</li>
+                <li>Integration with Google Workspace and other tools.</li>
+              </ul>
+              <RouterLink to="/pricing#appsheet" class="btn btn-accent">View Pricing</RouterLink>
+            </div>
           </li>
           <li class="border-outline">
             <div class="icon">
               <FontAwesomeIcon :icon="['fas', 'computer']" />
             </div>
             <h3>Computer Repairs & Troubleshooting</h3>
-            <p>Tech issues slowing you down? We provide expert computer repairs and troubleshooting services, ensuring your devices perform at their best.</p>
-            <ul>
-              <li>Hardware and software repairs</li>
-              <li>System diagnostics and optimization</li>
-              <li>Virus removal and data recovery</li>
-            </ul>
+            <div class="text-content">
+              <p>Tech issues slowing you down? We provide expert computer repairs and troubleshooting services, ensuring your devices perform at their best.</p>
+              <ul>
+                <li>Hardware and software repairs</li>
+                <li>System diagnostics and optimization</li>
+                <li>Virus removal and data recovery</li>
+              </ul>
+              <RouterLink to="/pricing#computer" class="btn btn-accent">View Pricing</RouterLink>
+            </div>
           </li>
         </ul>
       </div>
@@ -131,6 +141,17 @@
         }
       }
     }
+
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 2em;
+      height: 100%;
+
+      ul {
+        flex-grow: 2;
+      }
+    }
   }
 
   .services-container > ul > li:not(:last-of-type) {
@@ -149,7 +170,18 @@
     z-index: -1;
   }
 
-  .services-container ul > li > ul > li {
+  /* .services-container ul > li > ul > li {
+    font-weight: bold;
+    font-size: .976rem;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    background-color: var(--color-light);
+    border: none;
+    border-radius: 99vw;
+    box-shadow: rgba(65, 78, 210, 0.18) 0px 7px 29px 0px;
+  } */
+
+  .services-container .text-content ul > li {
     font-weight: bold;
     font-size: .976rem;
     padding: 1.5em;
