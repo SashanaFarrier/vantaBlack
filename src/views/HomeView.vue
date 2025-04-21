@@ -4,6 +4,8 @@
     import brainstormImg from '@/components/icons/brainstorming.png'
     import consultingImg from '@/components/icons/consulting.png'
     import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+    import CTA from '@/components/CTA.vue';
 </script>
 
 <template>
@@ -14,7 +16,7 @@
         <div class="left-col">
           <h1>Your All-in-One Digital Solution</h1>
           <p>At VantaBlack Technologies, we empower small businesses, startups, and individuals to succeed online. From custom websites and no-code AppSheet apps to expert tech support, we provide smart, tailored solutions that work.</p>
-          <RouterLink to="/contact" class="btn">Contact us</RouterLink>
+          <RouterLink to="/contact" class="btn">Let's Work Together</RouterLink>
         </div>
         <div class="right-col">
           <img :src="shapes" alt="">
@@ -41,7 +43,7 @@
     <div class="curve-banner"></div>
   </div>
   <main>
-    <section class="cta-section">
+    <section class="cta-section" style="color: #000000 !important; background-color: #ffffff !important;">
       <div class="container">
         <div class="banner">
           <h2>Let’s Build, Grow & Fix Together!</h2>
@@ -90,7 +92,6 @@
           <div class="flex-container">
             <div class="left-col">
               <h2>We believe that accessing reliable digital services should be effortless. Our approach is built around transparency, efficiency, and personalized support.</h2>
-              <RouterLink to="/contact" class="btn">Let's Talk</RouterLink>
             </div>
             <div class="right-col">
               <div class="list-items">
@@ -126,45 +127,49 @@
     <section class="faq">
           <div class="container">
             <div class="flex-container">
-              <div class="text-content">
-                <h2>Frequently Asked Questions</h2>
-              <details>
-                <summary>How do I get started with a website or tech service?</summary>
-                <p>Simply contact us through our form, and we’ll schedule a free consultation to discuss your needs and recommend the best solution.</p>
-              </details>
-              <details>
-                <summary>How long does it take to develop a website?</summary>
-                <ul>
-                  <li>CMS websites: 1-2 weeks</li>
-                  <li>Custom-coded websites: 2-4 weeks</li>
-                  <li>E-commerce websites: 4+ weeks (depending on complexity)</li>
-                </ul>
-              </details>
-              <details>
-                <summary>Do you offer website maintenance?</summary>
-                <p>Yes! We provide monthly maintenance services to keep your website running smoothly.</p>
-              </details>
-              <details>
-                <summary>What kind of apps can you build with Google AppSheet?</summary>
-                <p>We create custom no-code apps tailored to your needs—whether it's for inventory management or workflow automation. If you have a process, we can help you digitize it with AppSheet.</p>
-              </details>
-              <details>
-                <summary>What if I need a custom solution not listed on your website?</summary>
-                <p>We can create custom tech solutions tailored to your needs! Contact us, and we’ll discuss the best approach for your project.</p>
-              </details>
-            </div>
+              <div class="sticky-container">
+                <h3>Frequently Asked Questions</h3>
+                <p>Got questions? We’ve got answers. Here are some common questions about our services. Can't find what you're looking for? Don’t hesitate to reach out — we’re happy to help!</p>
+              </div>
+              <div class="questions">
+                <details class="border-outline">
+                  <summary>How do I get started with a website or tech service?</summary>
+                  <p>Simply contact us through our form, and we’ll schedule a free consultation to discuss your needs and recommend the best solution.</p>
+                </details>
+                <details class="border-outline">
+                  <summary>How long does it take to develop a website?</summary>
+                  <ul>
+                    <li>CMS websites: 1-2 weeks</li>
+                    <li>Custom-coded websites: 2-4 weeks</li>
+                    <li>E-commerce websites: 4+ weeks (depending on complexity)</li>
+                  </ul>
+                </details>
+                <details class="border-outline">
+                  <summary>Do you offer website maintenance?</summary>
+                  <p>Yes! We provide monthly maintenance services to keep your website running smoothly.</p>
+                </details>
+                <details class="border-outline">
+                  <summary>What kind of apps can you build with Google AppSheet?</summary>
+                  <p>We create custom no-code apps tailored to your needs—whether it's for inventory management or workflow automation. If you have a process, we can help you digitize it with AppSheet.</p>
+                </details>
+                <details class="border-outline">
+                  <summary>What if I need a custom solution not listed on your website?</summary>
+                  <p>We can create custom tech solutions tailored to your needs! Contact us, and we’ll discuss the best approach for your project.</p>
+                </details>
+              </div>
             </div>
           </div>
-        </section>
+    </section>
+    <div class="curve-banner-svg"></div>
+    <section class="footer-cta" style="color: #000000 !important; background-color: #ffffff !important">
+      <div class="container">
+        <CTA />
+      </div>
+    </section>
   </main>
 </template>
 
 <style scoped>
-
-  h2 {
-
-    line-height: 1.2;
-  }
 
   section {
     padding-bottom: 4em;
@@ -183,10 +188,6 @@
       > * {
         width: 100%
       }
-
-      /* .left-col {
-        max-width: 500px;
-      } */
 
       .btn {
           margin-top: 2em;
@@ -215,8 +216,7 @@
   }
 
   .cta-section {
-    color: black;
-    background: #fff;
+    background: transparent !important;
   }
 
   .cta-section .cards__container {
@@ -297,38 +297,47 @@
     }
   }
 
-  .faq h2 {
-    text-align: center;
-  }
-
   .cards__container {
     gap: 2em;
   }
 
   .faq {
-    padding-bottom: 6em;
-    background-color: var( --color-primary-dark);
+    color: black;
+    padding-block: 6em;
+    background: transparent;
+    background-color: white;
 
-    h2 {
-      margin-bottom: 2em;
+    h3 {
+      font-size: 3rem;
+      line-height: 1.2;
     }
 
     .flex-container {
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 4em;
     }
 
     details {
-      padding: 2em;
+      color: var(--color-dark);
+      padding: 1em;
       width: 100%;
       max-width: 900px;
-      border: 1px solid var( --color-accent);
+      margin-bottom: 2em;
 
       summary {
         font-weight: bold;
+        color: var(--color-primary);
         margin-bottom: .5em;
         cursor: pointer;
         }
     }
+  }
+
+  .footer-cta {
+    font-size: 2.5rem;
+    padding-top: 2em;
+    background: transparent;
   }
 
   @media screen and (min-width: 595px) {
@@ -411,6 +420,20 @@
 
         p {
           max-width: 40ch;
+      }
+
+    }
+
+    .faq {
+      .flex-container {
+      flex-direction: row;
+      }
+
+      .sticky-container {
+        position: sticky;
+        top: 20px;
+        align-self: flex-start;
+        max-width: 50ch;
       }
 
     }

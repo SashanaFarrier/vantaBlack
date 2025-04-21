@@ -84,7 +84,7 @@
         </ul>
           </div>
         </section>
-        <section>
+        <section class="footer-cta">
           <div class="container">
             <CTA />
           </div>
@@ -95,6 +95,7 @@
 <style scoped>
   main {
     color: #000;
+    padding-block: 4em;
     background-color: #fff;
   }
 
@@ -132,8 +133,8 @@
     flex-direction: column;
   }
 
-  .why-choose-us-container {
-    padding-bottom: 0px;
+  .about-us-text {
+    padding-top: 0px;
   }
 
   .intro .flex-container {
@@ -216,11 +217,6 @@
 
     h2 {
       font-size: 3rem;
-    }
-
-    .intro h2,
-    .mission-vision h2 {
-      margin-bottom: 0px;
     }
   }
 

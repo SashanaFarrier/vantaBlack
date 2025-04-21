@@ -13,9 +13,9 @@
           <div class="col-left">
             <h2>Web Development</h2>
           </div>
-          <div id="pricing-details" class="col-right">
+          <!-- <div id="pricing-details" class="col-right">
             <h2>Prices (USD)</h2>
-          </div>
+          </div> -->
       </div>
         <div class="body">
           <div class="row | flex-container">
@@ -23,7 +23,7 @@
               <p>Basic Website (5 pages, CMS-based)</p>
             </div>
             <div class="col-right">
-              <p>$300</p>
+              <p>$300/usd</p>
             </div>
           </div>
           <div class="row | flex-container">
@@ -31,7 +31,7 @@
               <p>E-commerce Store (Up to 10 products, CMS-based)</p>
             </div>
             <div class="col-right">
-              <p>$500</p>
+              <p>$500/usd</p>
             </div>
           </div>
           <div class="row | flex-container">
@@ -39,7 +39,7 @@
               <p>Custom-Coded Website (From scratch, tailored to your needs)</p>
             </div>
             <div class="col-right">
-              <p>Starting at $600</p>
+              <p>Starting at $600/usd</p>
             </div>
           </div>
           <div class="row | flex-container">
@@ -47,7 +47,7 @@
               <p>Website Maintenance (Updates, security, performance fixes)</p>
             </div>
             <div class="col-right">
-              <p>$50/month</p>
+              <p>$50/usd monthly</p>
             </div>
           </div>
         </div>
@@ -58,9 +58,6 @@
           <div class="col-left">
             <h2>Google AppSheet Development</h2>
           </div>
-          <div id="pricing-details" class="col-right">
-            <h2>Prices (USD)</h2>
-          </div>
         </div>
         <div class="body">
           <div class="row | flex-container">
@@ -68,7 +65,7 @@
               <p>Basic App (Simple data management app)</p>
             </div>
             <div class="col-right">
-              <p>$400</p>
+              <p>$400/usd</p>
             </div>
           </div>
           <div class="row | flex-container">
@@ -76,7 +73,7 @@
               <p>Advanced App (Workflow automation, integrations)</p>
             </div>
             <div class="col-right">
-              <p>Starting at $700</p>
+              <p>Starting at $700/usd</p>
             </div>
           </div>
         </div>
@@ -87,9 +84,6 @@
           <div class="col-left">
             <h2>Computer Repairs & Troubleshooting</h2>
           </div>
-          <div id="pricing-details" class="col-right">
-            <h2>Prices (USD)</h2>
-          </div>
         </div>
         <div class="body">
           <div class="row | flex-container">
@@ -97,7 +91,7 @@
               <p>Diagnostics & Troubleshooting</p>
             </div>
             <div class="col-right">
-              <p>$30</p>
+              <p>$30/usd</p>
             </div>
           </div>
           <div class="row | flex-container">
@@ -105,7 +99,7 @@
               <p>Software Installation & Optimization</p>
             </div>
             <div class="col-right">
-              <p>$50</p>
+              <p>$50/usd</p>
             </div>
           </div>
           <div class="row | flex-container">
@@ -166,22 +160,26 @@
   }
 
   .body .row {
+    color: var(--color-accent);
     padding: 2em;
-    max-width: 300px;
-    margin-inline: auto;
+    margin-bottom: 2em;
+    background-color: var(--color-dark);
+    box-shadow: rgba(65, 78, 210, 0.18) 0px 7px 29px 0px;
   }
 
   .col-left {
     font-size: 1rem;
 
     p {
+      color: var(--vt-c-white);
       padding-inline: .5em;
     }
   }
 
   .col-right p {
     font-size: 1.5rem;
-    color: var(--color-primary);
+    line-height: 1.2;
+    color: var(--color-accent);
     margin-bottom: 0px;
   }
 
@@ -189,18 +187,7 @@
     font-weight: bold;
   }
 
-  .body .row {
-    border-radius: 100%;
-  }
-
-  .body .row {
-    color: var(--color-dark);
-    margin-bottom: 2em;
-    background-color: var(--color-light);
-    box-shadow: rgba(65, 78, 210, 0.18) 0px 7px 29px 0px;
-  }
-
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 745px) {
     .pricing-hero-container {
       height: 90vh;
     }
@@ -232,11 +219,9 @@
     }
 
     .body .row {
-      max-width: 100%;
-      border-radius: 2em;
+      border-radius: 99vw;
     }
 
   }
-
 
 </style>

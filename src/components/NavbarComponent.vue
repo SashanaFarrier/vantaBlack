@@ -32,12 +32,11 @@
                     <img :src="closeIcon" alt="navigation close button" width="50" height="50">
                 </div>
                 <ul class="list-items right">
-                  <li><RouterLink to="/" @click="closeNavigationMenu">Home</RouterLink></li>
                   <li><RouterLink to="/about" @click="closeNavigationMenu">About Us</RouterLink></li>
                   <li><RouterLink to="/services" @click="closeNavigationMenu">Services</RouterLink></li>
                   <li><RouterLink to="/pricing" @click="closeNavigationMenu">Pricing</RouterLink></li>
-                  <li><RouterLink to="/contact" class="accent-btn" @click="closeNavigationMenu">Contact Us</RouterLink></li>
                 </ul>
+                <RouterLink to="/contact" class="btn" @click="closeNavigationMenu">Contact Us</RouterLink>
             </div>
         </nav>
       </div>
@@ -51,6 +50,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 
+
     ul {
       display: none;
     }
@@ -61,7 +61,8 @@ nav {
 }
 
 .navigation-list {
-    display: none;
+  text-align: center;
+  display: none;
 }
 
 .active.navigation-list,
@@ -87,7 +88,6 @@ nav {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
     transition: width, height 0.5s ease-in-out;
 }
 
@@ -102,13 +102,19 @@ nav {
     opacity: 0.5;
 }
 
-.navigation-list .close-btn > img{
+.navigation-list .close-btn > img {
     max-width: 50px;
 }
 
 header .list-items li {
     font-size: 2rem !important;
+    margin: 0px;
     margin-top: 1em;
+}
+
+header .btn {
+  font-size: 1.5rem !important;
+  margin-top: 2em;
 }
 
 ul li {
@@ -132,11 +138,11 @@ ul li {
 
     .navigation-list {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
         position: unset;
         height: 100%;
-        width: 100%;
+        width: 80%;
         background-color: transparent;
     }
 
@@ -147,10 +153,10 @@ ul li {
         gap: 2em;
     }
 
-    header .list-items li {
-        font-size: 1.2rem !important;
-        margin-top: 0px;
+    header .list-items li,
+    header .btn {
+      font-size: 1.2rem !important;
+      margin-block: 0px;
     }
-
 }
 </style>
