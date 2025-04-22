@@ -121,6 +121,10 @@ ul li {
     margin-right: 1em;
 }
 
+.hamburger-menu {
+  max-width: 80px;
+}
+
 .hamburger-menu,
 .close-btn {
     cursor: pointer;

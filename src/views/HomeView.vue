@@ -160,7 +160,6 @@
             </div>
           </div>
     </section>
-    <div class="curve-banner-svg"></div>
     <section class="footer-cta" style="color: #000000 !important; background-color: #ffffff !important">
       <div class="container">
         <CTA />
@@ -199,10 +198,10 @@
       height: 100%;
       }
 
-      .hero__content {
+      /* .hero__content {
         display: grid;
         place-content: center;
-      }
+      } */
 
       .features {
         margin-top: 4em;
@@ -248,6 +247,7 @@
 
   .feature h2 {
     font-weight: 900;
+    font-size: clamp(1rem, calc(1rem + 3vw), 4rem);
     margin-bottom: .25em;
   }
 
@@ -336,7 +336,7 @@
 
   .footer-cta {
     font-size: 2.5rem;
-    padding-top: 2em;
+    /* padding-top: 2em; */
     background: transparent;
   }
 

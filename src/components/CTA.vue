@@ -11,7 +11,8 @@
   .cta-container {
     text-align: center;
     color: var(--color-dark);
-    padding: calc(1rem + 2vw);
+    /* padding: calc(1rem + 5vw); */
+    padding: 4rem 2rem;
     background-color: var(--vt-c-white-mute);
     border-radius: 2em;
   }
@@ -21,12 +22,12 @@
     font-size: 3rem;
     color: var(--vt-c-black-mute) !important;
     text-decoration-color: var(--color-accent);
-    margin-top: 1em;
+    margin-top: .5em;
     transition: all 500ms ease-in-out;
   }
 
   p {
-    font-size: clamp(1.5rem, calc(1.5rem + .5vw), 3rem);
+    font-size: clamp(1rem, calc(1rem + .5vw), 3rem);
     max-width: 55ch;
     margin-inline: auto;
   }
