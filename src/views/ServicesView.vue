@@ -152,6 +152,13 @@
       padding-bottom: 1em;
       width: min(100%, 450px);
       isolation: isolate;
+      transition: all .25s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-5px);
+        box-shadow: 5px 10px var(--color-dark);
+      }
 
       .flex-container {
         flex-direction: column;

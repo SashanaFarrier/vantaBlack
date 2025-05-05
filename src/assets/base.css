@@ -83,6 +83,11 @@
   margin-inline: auto;
 }
 
+.text-xl {
+  font-size: clamp(1.5rem, calc(1.5rem + 3vw), 4.209rem);
+  line-height: 1.2;
+}
+
 .btn {
   font-weight: bold;
   text-decoration: none;

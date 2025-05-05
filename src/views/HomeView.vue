@@ -4,8 +4,40 @@
     import brainstormImg from '@/components/icons/brainstorming.png'
     import consultingImg from '@/components/icons/consulting.png'
     import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+    import { onMounted } from 'vue';
 
     import CTA from '@/components/CTA.vue';
+
+    onMounted(() => {
+
+    // const options = {
+    //   root: null,
+    //   rootMargin: "0px",
+    //   threshold: 1
+    // }
+
+    // function callback(entries, observer) {
+    //   entries.forEach(entry => {
+    //     if(entry.isIntersecting) {
+    //       entry.target.style.height = "100%"
+    //       console.log(entry)
+    //     }
+    //   })
+    // }
+
+    // let observer = new IntersectionObserver(callback, options)
+    // const listItems = document.querySelectorAll('.how-we-work ol li:not(:nth-of-type(3))');
+
+  // if (listItems.length > 0) {
+  //   listItems.forEach(li => observer.observe(li));
+  // } else {
+  //   console.warn('No matching list items found');
+  // }
+});
+
+
+
+
 </script>
 
 <template>
@@ -173,7 +205,8 @@
   section {
     padding-bottom: 4em;
     background: rgb(8,4,17);
-    background: linear-gradient(90deg, rgba(8,4,17,1) 0%, rgba(65,78,210,1) 100%);
+    background-color: var(--color-dark);
+    /* background: linear-gradient(90deg, rgba(8,4,17,1) 0%, rgba(65,78,210,1) 100%); */
   }
 
   .hero {
@@ -198,18 +231,13 @@
       height: 100%;
       }
 
-      /* .hero__content {
-        display: grid;
-        place-content: center;
-      } */
-
       .features {
         margin-top: 4em;
       }
   }
 
   .hero .flex-container,
-  .cta-section .flex-container,
+  .cta-section .cards__container.flex-container,
   .how-we-work ol {
     flex-direction: column;
   }
@@ -225,8 +253,14 @@
   .cta-section .card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     flex: 1 0 0%;
+    transition: all .25s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-5px);
+      box-shadow: 5px 10px var(--color-dark);
+    }
 
     svg {
       font-size: 2rem;
@@ -265,7 +299,18 @@
     text-align: center;
     position: relative;
     padding-block: 6em;
+    /* background: var(--color-dark) !important; */
     isolation: isolate;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: inherit;
+      height: 80px;
+      transform: skew(-40deg, 5deg);
+    }
 
     h2 {
       margin-bottom: 1em;
@@ -336,7 +381,6 @@
 
   .footer-cta {
     font-size: 2.5rem;
-    /* padding-top: 2em; */
     background: transparent;
   }
 
@@ -351,11 +395,11 @@
     .how-we-work  ol li:not(:nth-of-type(3)):before {
         content: "";
         position: absolute;
-        top: 50%;
+        top: 4rem;
         left: 50px;
         width: 3px;
         height: 100%;
-        background-color: var(--color-dark);
+        background-color: var(--color-primary);
         z-index: -1;
     }
   }
@@ -367,9 +411,16 @@
   }
 
   @media screen and (min-width: 900px) {
+    .hero__container.flex-container,
     .how-we-work ol {
-      flex-direction: row;
-  }
+        flex-direction: row;
+    }
+
+    /* .hero__container.flex-container,
+    .cta-section .cards__container.flex-container,
+    .how-we-work ol {
+        flex-direction: row;
+    } */
 
     .how-we-work ol {
       gap: 1em;
@@ -377,8 +428,9 @@
   }
 
   @media screen and (min-width: 1200px) {
-      .hero .flex-container,
-      .how-we-work ol {
+    .hero .features .flex-container,
+    .cta-section .cards__container.flex-container,
+    .how-we-work ol {
         flex-direction: row;
     }
 
@@ -425,6 +477,7 @@
     }
 
     .faq {
+      padding-top: 10rem;
       .flex-container {
       flex-direction: row;
       }
