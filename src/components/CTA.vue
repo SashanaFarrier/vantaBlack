@@ -20,20 +20,13 @@
   a {
     font-weight: bold;
     font-size: 3rem;
-    color: var(--vt-c-black-mute) !important;
-    text-decoration-color: var(--color-accent);
     margin-top: .5em;
-    transition: all 500ms ease-in-out;
   }
 
   p {
     font-size: clamp(1rem, calc(1rem + .5vw), 3rem);
     max-width: 55ch;
     margin-inline: auto;
-  }
-
-  a:hover {
-    opacity: 0.8;
   }
 
 </style>

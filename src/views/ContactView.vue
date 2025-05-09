@@ -86,7 +86,7 @@ const validateField = (field) => {
 
 <template>
   <main>
-    <div class="contact-container">
+    <section class="contact-container">
     <div class="container">
       <div class="contact-container__wrapper">
         <div class="left-col">
@@ -94,7 +94,7 @@ const validateField = (field) => {
           <ul>
             <li>
               <img src="" alt="">
-              <h2>Work With Us</h2>
+              <h3>Work With Us</h3>
               <p>We are ready to help you find the right solution for your business needs. Whether you need a website, social media content, SEO, or tech support, we’ve got you covered.</p>
             </li>
             <li>
@@ -111,9 +111,6 @@ const validateField = (field) => {
         </div>
         <div class="right-col">
           <form @submit.prevent="submitForm">
-            <!-- <input type="hidden" name="access_key" value="88f83081-4f27-4587-be2b-03c6fa6a44cf">
-            <input type="hidden" name="subject" value="New Inquiry Form Submission for Web3Forms" />
-            <input type="hidden" name="from_name" value="VantaBlack Technologies" /> -->
              <div class="row">
               <div class="col">
                 <label for="firstname">First name</label>
@@ -169,10 +166,7 @@ const validateField = (field) => {
                 <FontAwesomeIcon :icon="['fas', 'circle-exclamation']" />
                 {{ errors.message }}</span>
              </div>
-            <!-- Honeypot Spam Protection -->
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-            <!-- Custom Confirmation / Success Page -->
-            <!-- <input type="hidden" name="redirect" value="https://vbtechja.com/thanks"> -->
             <button type="submit" class="btn">Submit</button>
           </form>
           <div class="contact-info">
@@ -183,22 +177,21 @@ const validateField = (field) => {
         </div>
       </div>
     </div>
-   </div>
+  </section>
   </main>
 </template>
 <style scoped>
-  main {
-    color: rgb(223, 226, 252);
+  h1 {
+    color: var(--color-primary);
   }
 
-  h2 {
-    color: var(--color-accent);
+  section {
+    background: transparent !important;
   }
 
   form,
   .contact-info {
     padding: 2em;
-    /* height: 100%; */
     background-color: #fff;
     border-radius: .25vw;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -214,12 +207,13 @@ const validateField = (field) => {
     align-items: center;
     margin-top: 2em;
     background-color: var(--color-accent);
+
     p {
+      font-size: clamp(.8rem, calc(1rem + .25vw), 1.5rem);
       margin-bottom: .5em;
     }
-    span {
 
-      /* color: var(--color-accent); */
+    span {
      margin-right: .5em;
     }
   }
@@ -235,7 +229,6 @@ const validateField = (field) => {
     padding: .5em;
     width: 100%;
   }
-
 
   button[type="submit"] {
     text-transform: uppercase;
