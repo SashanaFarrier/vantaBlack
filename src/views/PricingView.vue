@@ -31,28 +31,26 @@
     </div>
   </div>
   <main>
-    <div class="container">
+    <section>
+      <div class="container">
       <div class="pricing-details__container | flex-container">
         <div class="col nav-col">
-          <h2>Services</h2>
+          <!-- <h2>Services</h2> -->
           <nav>
             <ul>
               <li><a href="#web-development" :class="{ active: activeSection === 'web-development' }">Web Development</a></li>
-              <li><a href="#web-hosting" :class="{ active: activeSection === 'web-hosting' }">Web Hosting & Domain</a></li>
+              <!-- <li><a href="#web-hosting" :class="{ active: activeSection === 'web-hosting' }">Web Hosting & Domain</a></li> -->
               <li><a href="#appsheet" :class="{ active: activeSection === 'appsheet' }">Google AppSheet Development</a></li>
               <li><a href="#computer" :class="{ active: activeSection === 'computer' }">Computer Repairs & Troubleshooting</a></li>
             </ul>
           </nav>
         </div>
         <div class="col">
-          <div id="web-development" class="service | border-outline">
+          <!-- <div id="web-development" class="service | border-outline">
             <div class="header | flex-container">
               <div class="col-left">
                 <h3>Web Development</h3>
               </div>
-              <!-- <div id="pricing-details" class="col-right">
-                <h2>Prices (USD)</h2>
-              </div> -->
           </div>
           <div class="body">
             <div class="row | flex-container">
@@ -89,69 +87,99 @@
             </div>
           </div>
           <RouterLink to="/contact" class="btn">Contact us</RouterLink>
+        </div> -->
+
+        <div id="web-development" class="service">
+          <ul>
+            <li>
+              <p>
+                <span>Basic Website (Less than 5 pages)</span>
+                <span>$150/usd</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span>Website (5 pages or more) </span>
+                <span>$300/usd</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span>Shopify E-commerce Store</span>
+              <span>$500/usd</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span>WordPress E-commerce Store</span>
+              <span>$400/usd</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span>Website Maintenance (Updates, security, performance fixes)</span>
+              <span>$15/usd monthly</span>
+              </p>
+            </li>
+          </ul>
         </div>
-        <div id="web-hosting" class="service | border-outline">
+        <div id="appsheet" class="service">
+          <ul>
+            <li>
+              <p>
+                <span>Basic App (Simple data management app)</span>
+                <span>$300/usd</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span>Advanced App (Workflow automation, integrations)</span>
+                <span>Starting at $700/usd</span>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <!-- <div id="" class="service | border-outline">
             <div class="header | flex-container">
               <div class="col-left">
                 <h3>Web Hosting & Domain Purchase</h3>
               </div>
-              <!-- <div id="pricing-details" class="col-right">
-                <h2>Prices (USD)</h2>
-              </div> -->
           </div>
           <div class="body">
             <div class="row | flex-container">
               <div class="col-left">
                 <p>Windows and Linux Hosting for any website type.</p>
               </div>
-              <!-- <div class="col-right">
-                <p>$300/usd</p>
-              </div> -->
             </div>
             <div class="row | flex-container">
               <div class="col-left">
                 <p>Fast and Secure Servers for maximum uptime.</p>
               </div>
-              <!-- <div class="col-right">
-                <p>$500/usd</p>
-              </div> -->
             </div>
             <div class="row | flex-container">
               <div class="col-left">
                 <p>Free SSL Certificates to protect your website and visitors.</p>
               </div>
-              <!-- <div class="col-right">
-                <p>Starting at $600/usd</p>
-              </div> -->
             </div>
             <div class="row | flex-container">
               <div class="col-left">
                 <p>Daily and Weekly Website Backups to safeguard your data.</p>
               </div>
-              <!-- <div class="col-right">
-                <p>$50/usd monthly</p>
-              </div> -->
             </div>
             <div class="row | flex-container">
               <div class="col-left">
                 <p>Professional Email Hosting (yourname@yourdomain.com).</p>
               </div>
-              <!-- <div class="col-right">
-                <p>$50/usd monthly</p>
-              </div> -->
             </div>
             <div class="row | flex-container">
               <div class="col-left">
                 <p>24/7 Monitoring and Security Tools to keep your site protected.</p>
               </div>
-              <!-- <div class="col-right">
-                <p>$50/usd monthly</p>
-              </div> -->
             </div>
           </div>
           <RouterLink to="/contact" class="btn">View Pricing</RouterLink>
-        </div>
-        <div id="appsheet" class="service | border-outline">
+        </div> -->
+        <!-- <div id="appsheet" class="service | border-outline">
           <div class="header | flex-container">
             <div class="col-left">
               <h3>Google AppSheet Development</h3>
@@ -176,7 +204,7 @@
             </div>
           </div>
           <RouterLink to="/contact" class="btn">Contact us</RouterLink>
-        </div>
+        </div> -->
       <div id="computer" class="service | border-outline">
         <div class="header | flex-container">
           <div class="col-left">
@@ -215,11 +243,14 @@
       </div>
 
     </div>
+    </section>
+
   </main>
 </template>
 <style scoped>
-  main {
-    padding-block: 4em;
+  section {
+    color: var(--color-dark);
+    background: transparent !important;
   }
 
   h2 {
@@ -230,13 +261,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(65,78,210,1);
+    background: rgb(8,4,17);
+    background: linear-gradient(90deg, rgba(8,4,17,1) 100%, rgba(65,78,210,1) 0%);
+    /* background: linear-gradient(90deg, rgba(8,4,17,1) 0%, rgba(65,78,210,1) 100%); */
+    /* background-color: rgba(65,78,210,1);
     background-image: url(/src/assets/banner-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode:screen;
-    background-position: 100%;
+    background-position: 100%; */
     padding-block: 4em;
+    min-height: 60vh;
 
     .pricing-hero-container__content {
       max-width: 50ch;
@@ -258,13 +293,10 @@
     top: 50px;
     align-self: flex-start;
 
-    li {
-      /* font-size: 1.5rem; */
-    }
-
     a.active {
-      color: var(--color-accent);
       font-weight: bold;
+      font-size: 1.5rem;
+      color: var(--color-accent);
     }
 
   }
@@ -275,9 +307,23 @@
     padding: 2em;
     max-width: 1100px;
 
-    .btn{
-      margin-top: 2em;
+    li {
+      padding-block: 3rem;
+      border-bottom: 1px solid var(--color-light);
     }
+
+    li p {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &:first-of-type li:first-of-type {
+      border-top: 1px solid var(--color-light);
+    }
+
+    /* .btn{
+      margin-top: 2em;
+    } */
 
   }
 
@@ -285,43 +331,43 @@
     flex-direction: column;
     align-items: center;
   }
-
+/*
   .body .row {
     color: var(--color-accent);
     padding: 2em;
     margin-bottom: 2em;
     background-color: var(--color-dark);
     box-shadow: rgba(65, 78, 210, 0.18) 0px 7px 29px 0px;
-  }
+  } */
 
-  .col-left {
+  /* .col-left {
     font-size: 1rem;
 
     p {
       color: var(--vt-c-white);
       padding-inline: .5em;
     }
-  }
+  } */
 
-  .col-right p {
+  /* .col-right p {
     font-size: 1.5rem;
     line-height: 1.2;
     color: var(--color-accent);
     margin-bottom: 0px;
-  }
+  } */
 
-  .body {
+  /* .body {
     font-weight: bold;
-  }
+  } */
 
   @media screen and (min-width: 745px) {
     .pricing-hero-container {
-      height: 90vh;
+      /* height: 90vh; */
     }
 
-    .service {
+    /* .service {
       text-align: left;
-    }
+    } */
 
     .service .flex-container {
       flex-direction: row;
@@ -330,24 +376,24 @@
       gap: 2em;
     }
 
-    .header,
+    /* .header,
     .body .row {
       padding: 1em 1.5em;
-    }
+    } */
 
-    .body p {
+    /* .body p {
       margin-bottom: 0px;
-    }
+    } */
 
-    .col-right {
+    /* .col-right {
       text-align: right;
       justify-self: flex-end;
       width: 40%;
-    }
+    } */
 
-    .body .row {
+    /* .body .row {
       border-radius: 99vw;
-    }
+    } */
 
   }
 

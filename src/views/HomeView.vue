@@ -1,79 +1,22 @@
 <script setup>
-    import shapes from '@/assets/services-img.png'
+    //import shapes from '@/assets/services-img.png'
+    //  import shapes from '@/assets/balls.png'
     import targetImg from '@/components/icons/target.png'
     import brainstormImg from '@/components/icons/brainstorming.png'
     import consultingImg from '@/components/icons/consulting.png'
     import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-    import { onMounted } from 'vue';
 
     import CTA from '@/components/CTA.vue';
-
-    onMounted(() => {
-
-    // const options = {
-    //   root: null,
-    //   rootMargin: "0px",
-    //   threshold: 1
-    // }
-
-    // function callback(entries, observer) {
-    //   entries.forEach(entry => {
-    //     if(entry.isIntersecting) {
-    //       entry.target.style.height = "100%"
-    //       console.log(entry)
-    //     }
-    //   })
-    // }
-
-    // let observer = new IntersectionObserver(callback, options)
-    // const listItems = document.querySelectorAll('.how-we-work ol li:not(:nth-of-type(3))');
-
-  // if (listItems.length > 0) {
-  //   listItems.forEach(li => observer.observe(li));
-  // } else {
-  //   console.warn('No matching list items found');
-  // }
-});
-
-
-
 
 </script>
 
 <template>
-  <div class="hero">
+  <section class="hero">
     <div class="container">
-      <div class="hero__content">
-        <div class="hero__container | flex-container align-items-center justify-content-between">
-        <div class="left-col">
-          <h1>Your All-in-One Digital Solution</h1>
-          <p>At VantaBlack Technologies, we empower small businesses, startups, and individuals to succeed online. From custom websites and no-code AppSheet apps to expert tech support, we provide smart, tailored solutions that work.</p>
-          <RouterLink to="/contact" class="btn">Let's Work Together</RouterLink>
-        </div>
-        <div class="right-col">
-          <img :src="shapes" alt="">
-        </div>
-      </div>
-      <div class="features">
-          <div class="features__container | flex-container justify-content-between">
-            <div class="feature | border-outline">
-              <h2>Comprehensive Services</h2>
-              <p>From website development to computer repairs, we handle it all.</p>
-            </div>
-            <div class="feature | border-outline">
-              <h2> Custom Solutions</h2>
-              <p>Tailored services that fit your unique needs.</p>
-            </div>
-            <div class="feature | border-outline">
-              <h2>Affordable Pricing</h2>
-              <p>High-quality service without the premium price tag.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>From web development and no-code automation to advanced computer services.</h1>
+      <p>At VantaBlack Technologies, we empower small businesses, startups, and individuals to succeed online. From custom websites and no-code AppSheet apps to expert tech support, we provide smart, tailored solutions that work.</p>
     </div>
-    <div class="curve-banner"></div>
-  </div>
+  </section>
   <main>
     <section class="cta-section" style="color: #000000 !important; background-color: #ffffff !important;">
       <div class="container">
@@ -88,7 +31,7 @@
                 <div class="icon">
                   <FontAwesomeIcon :icon="['fas', 'globe']" />
                 </div>
-                  <h3>Web Development</h3>
+                  <h3>Web Design & Development</h3>
                   <p>Get a modern, responsive, and high-performing website tailored to your brand. Whether it's a business site, e-commerce store, or portfolio, we build it right.</p>
                 </div>
                   <RouterLink to="/services#services" class="btn">Learn More</RouterLink>
@@ -108,7 +51,7 @@
                 <div class="icon">
                   <FontAwesomeIcon :icon="['fas', 'computer']" />
                 </div>
-                <h3> Computer Repairs & Troubleshooting</h3>
+                 <h3>Computer Repair & Custom Builds</h3>
                 <p>Is your computer slow, glitching, or refusing to turn on? Our tech experts diagnose and fix issues fast, so you can get back to work.</p>
               </div>
                 <RouterLink to="/services#services" class="btn">Learn More</RouterLink>
@@ -120,7 +63,6 @@
     <section class="how-we-work">
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 400"><path d="M4.035874366760254,3.5874438285827637C63.1434961271286,58.52017879724503,186.18385162830353,193.96412240743638,245.29147338867188,227.8026885986328C304.39909514904025,261.64125478982925,272.09864768981936,153.1300478363037,245.29147338867188,141.70404052734375C218.48429908752442,130.2780332183838,113.02241333007812,127.33184707641601,135.8744354248047,181.16592407226562C158.72645751953124,235.00000106811524,227.38117607116698,353.0851908874512,338.5650329589844,361.4349670410156C449.7488898468018,369.7847431945801,547.0583018493652,254.57847785949707,589.6860961914062,215.24664306640625C632.3138905334473,175.91480827331543,523.7623129272461,182.87892822265624,512.5560302734375,200.89686584472656C501.3497476196289,218.91480346679688,509.22867706298825,277.5829704284668,543.9461669921875,288.78924560546875C578.6636569213867,299.9955207824707,612.5111825561523,292.3408031082153,654.2600708007812,246.6367645263672C696.0089590454102,200.93272594451904,686.8834143066406,154.53811170578004,714.3497924804688,102.24214935302734C741.8161706542969,49.946187000274655,766.3677368164062,48.345290889739985,766.3677368164062,33.18385696411133C766.3677368164062,18.022423038482668,711.932765197754,29.372197856903078,714.3497924804688,40.35874557495117C716.7668197631835,51.345293292999266,761.0717306518554,68.79820886611938,776.233154296875,78.02690887451172" fill="none" stroke-width="2" stroke="url(&quot;#SvgjsLinearGradient1002&quot;)" stroke-linecap="butt" stroke-dasharray="7 13" stroke-opacity="0.05" transform="matrix(1.0310912041257634,0.17632698070846498,-0.18729141700863783,0.9378175917484732,31.958905816783954,-40.15566375798812)"></path><defs><linearGradient id="SvgjsLinearGradient1002"><stop stop-color="#a3abf3" offset="0"></stop><stop stop-color="#dfe2fc" offset="1"></stop></linearGradient></defs></svg>
       <div class="container">
-        <div class="">
           <div class="flex-container">
             <div class="left-col">
               <h2>We believe that accessing reliable digital services should be effortless. Our approach is built around transparency, efficiency, and personalized support.</h2>
@@ -153,7 +95,6 @@
           </div>
             </div>
           </div>
-        </div>
       </div>
     </section>
     <section class="faq">
@@ -201,46 +142,66 @@
 </template>
 
 <style scoped>
-
-  section {
-    padding-bottom: 4em;
-    background: rgb(8,4,17);
-    background-color: var(--color-dark);
-    /* background: linear-gradient(90deg, rgba(8,4,17,1) 0%, rgba(65,78,210,1) 100%); */
-  }
-
   .hero {
-    padding-top: 4em;
+    display: grid;
+    place-items: center;
+    position: relative;
     background: rgb(8,4,17);
-    background: linear-gradient(90deg, rgba(8,4,17,1) 0%, rgba(65,78,210,1) 100%);
-
-    .hero__container {
-      gap: 6em;
-
-      > * {
-        width: 100%
-      }
-
-      .btn {
-          margin-top: 2em;
-      }
-    }
-
-    .container,
-    .hero__content {
-      height: 100%;
-      }
-
-      .features {
-        margin-top: 4em;
-      }
+    background: linear-gradient(90deg, rgba(8,4,17,1) 100%, rgba(65,78,210,1) 0%);
+    min-height: 100vh;
   }
 
-  .hero .flex-container,
+  .hero p {
+    color: var(--color-accent);
+    margin-top: 2rem;
+    max-width: 35ch;
+  }
+
   .cta-section .cards__container.flex-container,
   .how-we-work ol {
     flex-direction: column;
   }
+
+  /* .features {
+    --color-accent: rgb(199, 204, 250);
+    color: var(--color-light);
+      padding: clamp(1em, calc(1em + 2vw), 4em);
+      margin-top: 4em;
+      background-color: rgba(65, 78, 210, 0.7);
+      border-top-left-radius: 2vw;
+      border-top-right-radius: 2vw;
+      border-bottom-left-radius: .5vw;
+      border-bottom-right-radius: .5vw;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .features .flex-container {
+        gap: 2rem;
+      }
+
+  .feature {
+    width: 100%;
+    padding: 1.5em;
+    background-color: rgba(199, 204, 250, 0.1);
+    border-radius: 1em;
+  } */
+
+  /* .feature:not(:nth-of-type(3)) {
+    border-right: 1px solid var(--color-primary);
+    margin-right: 4em;
+  } */
+
+  /* .feature h2 {
+    font-weight: 900;
+    font-size: clamp(1rem, calc(1rem + .5vw ), 2rem) !important;
+    color: var( --color-dark);
+    margin-bottom: .25em;
+  } */
+
+  /* .feature p {
+    font-size: clamp(.8rem, calc(.8rem + .5vw ), 2rem);
+    color: var(--color-white);
+  } */
 
   .cta-section {
     background: transparent !important;
@@ -279,12 +240,6 @@
     text-align: center;
   }
 
-  .feature h2 {
-    font-weight: 900;
-    font-size: clamp(1rem, calc(1rem + 3vw), 4rem);
-    margin-bottom: .25em;
-  }
-
   .banner {
     text-align: center;
     line-height: 1.5;
@@ -296,10 +251,10 @@
   }
 
   .how-we-work {
+    color: var(--color-accent);
     text-align: center;
     position: relative;
     padding-block: 6em;
-    /* background: var(--color-dark) !important; */
     isolation: isolate;
 
     &::before {
@@ -312,8 +267,12 @@
       transform: skew(-40deg, 5deg);
     }
 
-    h2 {
-      margin-bottom: 1em;
+    h3 {
+      margin-block: 1rem;
+    }
+
+    p {
+      color: var(--color-light);
     }
 
     .flex-container {
@@ -348,7 +307,6 @@
 
   .faq {
     color: black;
-    padding-block: 6em;
     background: transparent;
     background-color: white;
 
@@ -381,6 +339,7 @@
 
   .footer-cta {
     font-size: 2.5rem;
+    padding-bottom: 3em;
     background: transparent;
   }
 
@@ -411,36 +370,31 @@
   }
 
   @media screen and (min-width: 900px) {
-    .hero__container.flex-container,
     .how-we-work ol {
         flex-direction: row;
     }
-
-    /* .hero__container.flex-container,
-    .cta-section .cards__container.flex-container,
-    .how-we-work ol {
-        flex-direction: row;
-    } */
 
     .how-we-work ol {
       gap: 1em;
     }
   }
 
+  @media screen and (min-width: 1100px) {
+    .hero p {
+    margin-top: 6rem;
+    margin-left: auto;
+  }
+  }
+
   @media screen and (min-width: 1200px) {
-    .hero .features .flex-container,
     .cta-section .cards__container.flex-container,
     .how-we-work ol {
         flex-direction: row;
     }
 
-    .hero__container  .left-col {
-        max-width: 500px;
-      }
-
-      .features .feature {
+      /* .features .feature {
         padding-inline: clamp(.5rem, calc(.8rem + .25vw), 2rem);
-      }
+      } */
 
     .cta-section .flex-container {
       flex-direction: row;

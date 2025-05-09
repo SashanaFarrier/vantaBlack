@@ -32,60 +32,36 @@
     <header>
         <nav :class="[isActive ? 'active' : '', 'navigation-list']">
           <div class="container">
-          <div class="nav-container">
-            <div class="col">
-              <div class="logo">
-              <RouterLink to="/"><img :src="logo" alt="VantaBlack Technologies"/></RouterLink>
-            </div>
-            <div @click="toggleNavigationMenu" class="hamburger-menu">
-              <img :src="menuIcon" alt="menu icon" width="50" height="50" />
-            </div>
-            <div @click="toggleNavigationMenu" class="close-btn" :class="isActive ? 'active' : ''">
-              <img :src="closeIcon" alt="navigation close button" width="50" height="50">
-            </div>
-            </div>
-            <div class="col">
-              <ul class="list-items right">
-              <li><RouterLink to="/" @click="closeNavigationMenu">Home</RouterLink></li>
-              <li><RouterLink to="/about" @click="closeNavigationMenu">About Us</RouterLink></li>
-              <li><RouterLink to="/services" @click="closeNavigationMenu">Services</RouterLink></li>
-              <li><RouterLink to="/pricing" @click="closeNavigationMenu">Pricing</RouterLink></li>
-            </ul>
-            <ul class="list-items">
-              <li>
-                <RouterLink to="/contact" class="btn" @click="closeNavigationMenu">Hosting & Domains</RouterLink>
-              </li>
-              <li>
-                <RouterLink to="/contact" @click="closeNavigationMenu">Contact Us</RouterLink>
-              </li>
-            </ul>
-            </div>
-
-
-          </div>
-
-            <!-- <div>
-                <div @click="toggleNavigationMenu" class="close-btn" :class="isActive ? 'active' : ''">
-                    <img :src="closeIcon" alt="navigation close button" width="50" height="50">
-                </div>
+            <div class="nav-container">
+              <div class="col">
+                <div class="logo">
+                <RouterLink to="/"><img :src="logo" alt="VantaBlack Technologies"/></RouterLink>
+              </div>
+              <div @click="toggleNavigationMenu" class="hamburger-menu">
+                <img :src="menuIcon" alt="menu icon" width="50" height="50" />
+              </div>
+              <div @click="toggleNavigationMenu" class="close-btn" :class="isActive ? 'active' : ''">
+                <img :src="closeIcon" alt="navigation close button" width="50" height="50">
+              </div>
+              </div>
+              <div class="col">
                 <ul class="list-items right">
-                  <li><RouterLink to="/" @click="closeNavigationMenu">Home</RouterLink></li>
-                  <li><RouterLink to="/about" @click="closeNavigationMenu">About Us</RouterLink></li>
-                  <li><RouterLink to="/services" @click="closeNavigationMenu">Services</RouterLink></li>
-                  <li><RouterLink to="/pricing" @click="closeNavigationMenu">Pricing</RouterLink></li>
-                </ul>
-                <ul class="list-items">
-                  <li>
-                    <RouterLink to="/contact" class="btn" @click="closeNavigationMenu">Hosting & Domains</RouterLink>
-                  </li>
-                  <li>
-                    <RouterLink to="/contact" @click="closeNavigationMenu">Contact Us</RouterLink>
-                  </li>
-                </ul>
-            </div> -->
+                <li><RouterLink to="/" @click="closeNavigationMenu">Home</RouterLink></li>
+                <li><RouterLink to="/about" @click="closeNavigationMenu">About Us</RouterLink></li>
+                <li><RouterLink to="/services" @click="closeNavigationMenu">Services</RouterLink></li>
+              </ul>
+              <ul class="list-items">
+                <li>
+                  <a href="https://www.vbhosting.store/" target="_blank" class="btn" @click="closeNavigationMenu">Get Online</a>
+                </li>
+                <li>
+                  <RouterLink to="/contact" class="btn btn-outline" @click="closeNavigationMenu">Contact Us</RouterLink>
+                </li>
+              </ul>
+              </div>
+            </div>
           </div>
-          </nav>
-
+        </nav>
     </header>
 </template>
 
@@ -95,12 +71,6 @@ header .list-items li {
     font-size: 1.5rem !important;
     margin: 0px;
     margin-top: 1em;
-}
-
-header .btn {
-  /* font-size: 1.5rem !important;
-  margin-top: 2em; */
-  /* padding: 1rem; */
 }
 
 nav {
@@ -189,17 +159,6 @@ ul li {
 }
 
 .active.navigation-list .nav-container {
-  /* text-align: center; */
-  /* flex-direction: column; */
-}
-
-
-/* .active.navigation-list,
-.active.navigation-list .close-btn {
-    display: block;
-} */
-
-.active.navigation-list .nav-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -260,14 +219,6 @@ ul li {
   width: 80%;
 }
 
-/* .navigation-list .close-btn {
-    display: none;
-    text-align: right;
-    opacity: 1;
-    transition: opacity 500ms ease-in-out;
-} */
-
-
 .active.navigation-list .close-btn {
   display: block;
 }
@@ -275,15 +226,6 @@ ul li {
 .active.navigation-list .hamburger-menu {
   display: none;
 }
-
-
-
-
-/* .navigation-list .close-btn > img {
-    max-width: 50px;
-} */
-
-
 
 @media screen and (min-width: 1250px) {
   ul li {

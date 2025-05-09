@@ -43,9 +43,10 @@
         <div class="right-col">
           <nav>
               <ul>
+                <li><RouterLink to="/">Home</RouterLink></li>
                 <li><RouterLink to="/about">About Us</RouterLink></li>
                 <li><RouterLink to="/services">Services</RouterLink></li>
-                <li><RouterLink to="/pricing">Pricing</RouterLink></li>
+                <li><a href="https://www.vbhosting.store/" target="_blank">Hosting & Domain</a></li>
               </ul>
             </nav>
         </div>
@@ -68,6 +69,11 @@
 
   h3, p {
     margin-bottom: 0px;
+  }
+
+  footer p,
+  footer nav a {
+    font-size: clamp(.8rem, calc(1rem + .25vw), 1.5rem);
   }
 
   .logo {
@@ -146,7 +152,6 @@ footer ul li a:hover,
     justify-content: flex-start;
     gap: 6em;
   }
-
 
   .right-col {
     justify-self: flex-end;

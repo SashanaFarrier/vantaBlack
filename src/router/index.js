@@ -28,11 +28,11 @@ const router = createRouter({
       name: 'services',
       component: () => import('../views/ServicesView.vue')
     },
-    {
-      path: '/pricing',
-      name: 'pricing',
-      component: () => import('../views/PricingView.vue')
-    },
+    // {
+    //   path: '/pricing',
+    //   name: 'pricing',
+    //   component: () => import('../views/PricingView.vue')
+    // },
     {
       path: '/contact',
       name: 'contact',
@@ -42,6 +42,11 @@ const router = createRouter({
       path: '/thanks',
       name: 'thanks',
       component: () => import('../views/ThanksView.vue')
+    },
+    {
+      path: '/:notFound',
+      name: 'thanks',
+      component: () => import('../views/NotFound.vue')
     }
   ],
   scrollBehavior(to) {

@@ -24,9 +24,9 @@
               </div>
               <div class="flex-container">
                 <div class="text-content">
-                <h3>Website Design & Hosting</h3>
-                <p>Your website is your digital storefront, and we make sure it stands out. Whether you need a simple portfolio, an eCommerce store, or a custom-coded site, we’ve got you covered. Our hosting solutions ensure speed, security, and reliability.</p>
-                <RouterLink to="/pricing#web-development" class="btn btn-accent">View Pricing</RouterLink>
+                <h3>Website Design & Development</h3>
+                <p>Your website is your digital storefront, and we make sure it stands out. </p>
+                <RouterLink to="/contact" class="btn btn-accent">Contact Us</RouterLink>
               </div>
                 <ul class="list-items">
                   <li>
@@ -49,8 +49,8 @@
               <div class="flex-container">
                 <div class="text-content">
                 <h3>Google AppSheet Development</h3>
-                <p>Stay ahead with custom no-code solutions that simplify and automate your business processes. We build Google AppSheet apps tailored to your workflow—whether it’s for tracking inventory or streamlining data collection—no coding required.</p>
-                <RouterLink to="/pricing#appsheet" class="btn btn-accent">View Pricing</RouterLink>
+                <p>Stay ahead with custom no-code solutions that simplify and automate your business processes.</p>
+                <RouterLink to="/contact" class="btn btn-accent">Contact Us</RouterLink>
               </div>
                 <ul class="list-items">
                   <li>
@@ -72,9 +72,9 @@
               </div>
               <div class="flex-container">
                 <div class="text-content">
-                 <h3>Computer Repairs & Troubleshooting</h3>
-                 <p>Tech issues slowing you down? We provide expert computer repairs and troubleshooting services, ensuring your devices perform at their best.</p>
-                <RouterLink to="/pricing#computer" class="btn btn-accent">View Pricing</RouterLink>
+                 <h3>Computer Repair & Custom Builds</h3>
+                 <p>We provide expert computer repairs and troubleshooting services, ensuring your devices perform at their best.</p>
+                <RouterLink to="/contact" class="btn btn-accent">Contact Us</RouterLink>
               </div>
                 <ul class="list-items">
                   <li>
@@ -86,6 +86,9 @@
                   <li>
                     <FontAwesomeIcon :icon="['fas', 'circle-check']" />
                     <span>Virus removal and data recovery.</span></li>
+                    <li>
+                    <FontAwesomeIcon :icon="['fas', 'circle-check']" />
+                    <span>Custom PC Build.</span></li>
                 </ul>
               </div>
             </li>
@@ -93,7 +96,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="cta-section">
       <div class="container">
         <CTA />
       </div>
@@ -103,16 +106,12 @@
 </template>
 
 <style scoped>
-
-  main {
-    color: #000;
-    padding-block: 4rem;
-    background-color: #fff;
-  }
-
   section {
+    --section-gap: 8rem;
+    color: var(--color-dark);
     text-align: center;
-    padding-block: 4em;
+    padding-block: var(--section-gap);
+    background: transparent;
   }
 
   h1 {
@@ -123,16 +122,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(65,78,210,1);
-    background-image: url(/src/assets/banner-2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode:screen;
-    background-position: 100%;
+    background: rgb(8,4,17);
+    background: linear-gradient(90deg, rgba(8,4,17,1) 100%, rgba(65,78,210,1) 0%);
     padding-block: 4em;
+    min-height: 60vh;
 
     .services-hero-container__content {
       max-width: 50ch;
+    }
+
+
+    p {
+      color: var(--color-accent);
+      margin-top: 1rem;
     }
   }
 
@@ -142,7 +144,13 @@
     justify-content: center;
     gap: 2em;
 
+    h3 {
+      font-size: 1.25rem;
+    }
+
     p {
+      font-size: 1rem;
+      line-height: 1.5;
       margin-bottom: 1em;
     }
 
@@ -226,21 +234,17 @@
     font-weight: bold;
     font-size: .976rem;
     border: none;
-    /* box-shadow: rgba(65, 78, 210, 0.18) 0px 7px 29px 0px; */
   }
 
-  @media screen and (min-width: 700px) {
-    .services-hero-container {
-      height: 90vh;
-    }
-
+  .cta-section {
+    padding-top: 0px;
   }
+
 
   @media screen and (min-width: 1200px) {
     .text-content {
       display: flex;
       flex-direction: column;
-      height: 350px;
 
       a {
         margin: 0px;
