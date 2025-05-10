@@ -14,7 +14,7 @@
   <section class="hero">
     <div class="container">
       <h1>From web development and no-code automation to advanced computer services.</h1>
-      <p>At VantaBlack Technologies, we empower small businesses, startups, and individuals to succeed online. From custom websites and no-code AppSheet apps to expert tech support, we provide smart, tailored solutions that work.</p>
+      <p>At VantaBlack Technologies, we empower small businesses, startups, and individuals to succeed online. From custom websites and no-code AppSheet apps to expert tech support and custom PC builds, we provide smart, tailored solutions that work.</p>
     </div>
   </section>
   <main>
@@ -22,7 +22,7 @@
       <div class="container">
         <div class="banner">
           <h2>Let’s Build, Grow & Fix Together!</h2>
-          <p>Ready to level up your digital game? Whether it’s creating a standout website, building a Google AppSheet app to streamline your workflow, or providing reliable tech support to keep you running—we’re ready to help. Let’s turn your vision into reality!</p>
+          <p>Ready to level up your digital game? Whether it’s creating a standout website, building a Google AppSheet app to streamline your workflow, or providing reliable tech support or custom PC builds—we’re ready to help. Let’s turn your vision into reality!</p>
         </div>
         <div class="cards">
           <div class="cards__container | flex-container justify-content-between">
@@ -52,7 +52,8 @@
                   <FontAwesomeIcon :icon="['fas', 'computer']" />
                 </div>
                  <h3>Computer Repair & Custom Builds</h3>
-                <p>Is your computer slow, glitching, or refusing to turn on? Our tech experts diagnose and fix issues fast, so you can get back to work.</p>
+                <p>Is your computer slow, glitching, or refusing to turn on?</p>
+                <p>Need a high-performance custom PC tailored for work, gaming, or creativity? We design and build rigs that match your exact needs.</p>
               </div>
                 <RouterLink to="/services#services" class="btn">Learn More</RouterLink>
             </div>
@@ -81,7 +82,7 @@
                 <img :src="brainstormImg" alt="">
                 <div class="text-content">
                   <h3>Strategy & Planning</h3>
-                  <p>Whether it's a website, Google AppSheet inventory management app, or computer troubleshooting, we develop a tailored approach to meet your needs.</p>
+                  <p>Precision-tailored blueprints for your digital success. Whether you need a website, an AppSheet workflow automation, or a custom PC build, we architect solutions with your exact goals, budget, and scalability in mind.</p>
                 </div>
               </li>
               <li class="">
@@ -112,9 +113,18 @@
                 <details class="border-outline">
                   <summary>How long does it take to develop a website?</summary>
                   <ul>
-                    <li>CMS websites: 1-2 weeks</li>
-                    <li>Custom-coded websites: 2-4 weeks</li>
-                    <li>E-commerce websites: 4+ weeks (depending on complexity)</li>
+                    <li>
+                      <FontAwesomeIcon :icon="['fas', 'circle-check']" />
+                      <p>CMS websites: 1-2 weeks</p>
+                    </li>
+                    <li>
+                      <FontAwesomeIcon :icon="['fas', 'circle-check']" />
+                      <p>Custom-coded websites: 2-4 weeks</p>
+                    </li>
+                    <li>
+                      <FontAwesomeIcon :icon="['fas', 'circle-check']" />
+                      <p>E-commerce websites: 4+ weeks (depending on complexity)</p>
+                    </li>
                   </ul>
                 </details>
                 <details class="border-outline">
@@ -124,6 +134,10 @@
                 <details class="border-outline">
                   <summary>What kind of apps can you build with Google AppSheet?</summary>
                   <p>We create custom no-code apps tailored to your needs—whether it's for inventory management or workflow automation. If you have a process, we can help you digitize it with AppSheet.</p>
+                </details>
+                <details class="border-outline">
+                  <summary>How does the custom PC building process work?</summary>
+                  <p>We start with a free consultation to understand your needs (gaming, productivity, content creation, etc.), budget, and performance goals. Then, we design a tailored parts list, source high-quality components, and professionally assemble/test your system. You’ll receive a ready-to-use PC, fine-tuned for your specific requirements.</p>
                 </details>
                 <details class="border-outline">
                   <summary>What if I need a custom solution not listed on your website?</summary>
@@ -148,7 +162,6 @@
     position: relative;
     background: rgb(8,4,17);
     background: linear-gradient(90deg, rgba(8,4,17,1) 100%, rgba(65,78,210,1) 0%);
-    min-height: 100vh;
   }
 
   .hero p {
@@ -333,7 +346,24 @@
         color: var(--color-primary);
         margin-bottom: .5em;
         cursor: pointer;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+
+        p {
+          margin: 0px;
         }
+      }
+
+    svg {
+      font-size: 1.5rem;
+      color: var(--color-primary);
+      margin-right: .5em;
+    }
+
     }
   }
 
@@ -364,6 +394,10 @@
   }
 
   @media screen and (min-width: 700px) {
+    .hero {
+      min-height: 85vh;
+  }
+
     .faq summary {
       font-size: 2rem;
     }

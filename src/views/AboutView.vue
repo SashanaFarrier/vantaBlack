@@ -1,13 +1,3 @@
-<script setup>
-  // import icon1 from "@/assets/experience.png"
-  // import icon2 from "@/assets/target.png"
-  // import icon3 from "@/assets/idea.png"
-  // import CTA from "@/components/CTA.vue"
-  // import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
-  // import abstractImg from '@/assets/icon-1.png'
-  // import servicesImg from '@/assets/services.png'
-</script>
-
 <template>
     <div class="about-hero-container">
       <div class="container">
@@ -26,8 +16,8 @@
                   <h2>Who We Are</h2>
                 </div>
                 <div class="right-col">
-                  <p>At Vantablack Technologies, we empower businesses and individuals with cutting-edge digital solutions tailored to their unique needs. Specializing in web design and development, No-code app development with Google AppSheet, and computer repairs & troubleshooting, we bridge the gap between innovation and functionality.</p>
-                  <p>Founded in 2025, our mission is to help startups, small businesses, and forward-thinking professionals enhance their digital presence, streamline operations, and resolve technical challenges with efficiency and expertise. </p>
+                  <p>At Vantablack Technologies, we empower businesses and individuals with cutting-edge digital solutions tailored to their unique needs. Specializing in web design and development, no-code app development with Google AppSheet, computer repairs & custom PC builds, we bridge the gap between innovation and functionality.</p>
+                  <p>Our mission is to help startups, small businesses, individuals and forward-thinking professionals enhance their digital presence, streamline operations, and resolve technical challenges with efficiency and expertise.</p>
                 </div>
               </div>
             </div>
@@ -40,7 +30,7 @@
               <h2>Why Choose Us</h2>
             </div>
             <div class="right-col">
-              <p>In a world where technology evolves at lightning speed, you need a partner who can keep up—without compromising quality, clarity, or reliability. At Vantablack Technologies, we don’t just provide services; we deliver smart, tailored solutions designed to simplify your digital journey. Whether you're building an online presence, automating workflows, or solving tech challenges, our blend of expertise, dedication, and innovation ensures you get results that matter. Here’s what sets us apart:</p>
+              <p>In a world where technology evolves at lightning speed, you need a partner who can keep up—without compromising quality, clarity, or reliability. At Vantablack Technologies, we don’t just provide services; we deliver smart, tailored solutions designed to simplify your digital journey.</p>
             </div>
            </div>
           </div>

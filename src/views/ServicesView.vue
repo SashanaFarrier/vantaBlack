@@ -73,7 +73,7 @@
               <div class="flex-container">
                 <div class="text-content">
                  <h3>Computer Repair & Custom Builds</h3>
-                 <p>We provide expert computer repairs and troubleshooting services, ensuring your devices perform at their best.</p>
+                 <p>Fixing failing systems or building dream PCs—we optimize hardware for your exact needs</p>
                 <RouterLink to="/contact" class="btn btn-accent">Contact Us</RouterLink>
               </div>
                 <ul class="list-items">
