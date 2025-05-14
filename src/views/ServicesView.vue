@@ -122,17 +122,33 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
     background: rgb(8,4,17);
     background: linear-gradient(90deg, rgba(8,4,17,1) 100%, rgba(65,78,210,1) 0%);
     padding-block: 4em;
-    min-height: 60vh;
+    min-height: 90vh;
+    isolation: isolate;
 
-    .services-hero-container__content {
-      max-width: 50ch;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      max-width: 400px;
+      aspect-ratio: 1;
+      display: grid;
+      margin-inline: auto;
+      align-self: center;
+      background: linear-gradient(300deg,var(--color-accent),var(--color-primary),var(--color-dark));
+      background-size: 180% 180%;
+      animation: gradient-animation 3s ease infinite;
+      border-radius: 50%;
+      z-index: -1;
+      filter: blur(100px);
     }
-
+  
 
     p {
+      text-align: center;
       color: var(--color-accent);
       margin-top: 1rem;
     }
@@ -239,7 +255,6 @@
   .cta-section {
     padding-top: 0px;
   }
-
 
   @media screen and (min-width: 1200px) {
     .text-content {

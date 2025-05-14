@@ -16,8 +16,9 @@ body {
   /* background: var(--color-dark); */
   /* background: linear-gradient(90deg, rgba(8,4,17,1) 0%, rgba(65,78,210,1) 100%); */
   line-height: 1.6;
-  font-family:
-  "Finlandica", sans-serif;
+  /* font-family:
+  "Finlandica", sans-serif; */
+  font-family: "Zoom Pro Extended", sans-serif;
   font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -50,6 +51,8 @@ a {
 
 h1 {
   font-size: clamp(1.5rem, calc(1rem + 3vw), 5.61rem);
+  text-align: center;
+  letter-spacing: 5px;
   color: var(--color-white);
   /* font-size: clamp(2rem, calc(2rem + 6vw), 60%); */
   line-height: 1.2;
@@ -102,8 +105,8 @@ header {
   background: var(--color-dark);
   /* background: linear-gradient(90deg, rgba(8,4,17,1) 0%, rgba(65,78,210,1) 100%); */
   background: linear-gradient(90deg, rgba(8,4,17,1) 100%, rgba(65,78,210,1) 0%);
-  height: 15vh;
-  border-bottom: 1px solid var(--color-primary);;
+  height: 10vh;
+  /* border-bottom: 1px solid var(--color-primary);; */
   transition: all 0.5s ease-in-out;
 }
 

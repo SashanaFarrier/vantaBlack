@@ -13,8 +13,8 @@
 <template>
   <section class="hero">
     <div class="container">
-      <h1>From web development and no-code automation to advanced computer services.</h1>
-      <p>At VantaBlack Technologies, we empower small businesses, startups, and individuals to succeed online. From custom websites and no-code AppSheet apps to expert tech support and custom PC builds, we provide smart, tailored solutions that work.</p>
+      <h1>Web development and computer services</h1>
+       <p>Empowering small businesses, startups, and individuals to succeed online.</p>
     </div>
   </section>
   <main>
@@ -52,8 +52,7 @@
                   <FontAwesomeIcon :icon="['fas', 'computer']" />
                 </div>
                  <h3>Computer Repair & Custom Builds</h3>
-                <p>Is your computer slow, glitching, or refusing to turn on?</p>
-                <p>Need a high-performance custom PC tailored for work, gaming, or creativity? We design and build rigs that match your exact needs.</p>
+                <p>Slow or glitchy PC? Or need a custom high-performance rig? We repair and build computers tailored to your needs.</p>
               </div>
                 <RouterLink to="/services#services" class="btn">Learn More</RouterLink>
             </div>
@@ -62,7 +61,6 @@
       </div>
     </section>
     <section class="how-we-work">
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 400"><path d="M4.035874366760254,3.5874438285827637C63.1434961271286,58.52017879724503,186.18385162830353,193.96412240743638,245.29147338867188,227.8026885986328C304.39909514904025,261.64125478982925,272.09864768981936,153.1300478363037,245.29147338867188,141.70404052734375C218.48429908752442,130.2780332183838,113.02241333007812,127.33184707641601,135.8744354248047,181.16592407226562C158.72645751953124,235.00000106811524,227.38117607116698,353.0851908874512,338.5650329589844,361.4349670410156C449.7488898468018,369.7847431945801,547.0583018493652,254.57847785949707,589.6860961914062,215.24664306640625C632.3138905334473,175.91480827331543,523.7623129272461,182.87892822265624,512.5560302734375,200.89686584472656C501.3497476196289,218.91480346679688,509.22867706298825,277.5829704284668,543.9461669921875,288.78924560546875C578.6636569213867,299.9955207824707,612.5111825561523,292.3408031082153,654.2600708007812,246.6367645263672C696.0089590454102,200.93272594451904,686.8834143066406,154.53811170578004,714.3497924804688,102.24214935302734C741.8161706542969,49.946187000274655,766.3677368164062,48.345290889739985,766.3677368164062,33.18385696411133C766.3677368164062,18.022423038482668,711.932765197754,29.372197856903078,714.3497924804688,40.35874557495117C716.7668197631835,51.345293292999266,761.0717306518554,68.79820886611938,776.233154296875,78.02690887451172" fill="none" stroke-width="2" stroke="url(&quot;#SvgjsLinearGradient1002&quot;)" stroke-linecap="butt" stroke-dasharray="7 13" stroke-opacity="0.05" transform="matrix(1.0310912041257634,0.17632698070846498,-0.18729141700863783,0.9378175917484732,31.958905816783954,-40.15566375798812)"></path><defs><linearGradient id="SvgjsLinearGradient1002"><stop stop-color="#a3abf3" offset="0"></stop><stop stop-color="#dfe2fc" offset="1"></stop></linearGradient></defs></svg>
       <div class="container">
           <div class="flex-container">
             <div class="left-col">
@@ -108,40 +106,40 @@
               <div class="questions">
                 <details class="border-outline">
                   <summary>How do I get started with a website or tech service?</summary>
-                  <p>Simply contact us through our form, and we’ll schedule a free consultation to discuss your needs and recommend the best solution.</p>
+                  Simply contact us through our form, and we’ll schedule a free consultation to discuss your needs and recommend the best solution.
                 </details>
                 <details class="border-outline">
                   <summary>How long does it take to develop a website?</summary>
                   <ul>
                     <li>
                       <FontAwesomeIcon :icon="['fas', 'circle-check']" />
-                      <p>CMS websites: 1-2 weeks</p>
+                      <span>CMS websites: 1-2 weeks</span>
                     </li>
                     <li>
                       <FontAwesomeIcon :icon="['fas', 'circle-check']" />
-                      <p>Custom-coded websites: 2-4 weeks</p>
+                      <span>Custom-coded websites: 2-4 weeks</span>
                     </li>
                     <li>
                       <FontAwesomeIcon :icon="['fas', 'circle-check']" />
-                      <p>E-commerce websites: 4+ weeks (depending on complexity)</p>
+                      <span>E-commerce websites: 4+ weeks (depending on complexity)</span>
                     </li>
                   </ul>
                 </details>
                 <details class="border-outline">
                   <summary>Do you offer website maintenance?</summary>
-                  <p>Yes! We provide monthly maintenance services to keep your website running smoothly.</p>
+                  Yes! We provide monthly maintenance services to keep your website running smoothly.
                 </details>
                 <details class="border-outline">
                   <summary>What kind of apps can you build with Google AppSheet?</summary>
-                  <p>We create custom no-code apps tailored to your needs—whether it's for inventory management or workflow automation. If you have a process, we can help you digitize it with AppSheet.</p>
+                  We create custom no-code apps tailored to your needs—whether it's for inventory management or workflow automation. If you have a process, we can help you digitize it with AppSheet.
                 </details>
                 <details class="border-outline">
                   <summary>How does the custom PC building process work?</summary>
-                  <p>We start with a free consultation to understand your needs (gaming, productivity, content creation, etc.), budget, and performance goals. Then, we design a tailored parts list, source high-quality components, and professionally assemble/test your system. You’ll receive a ready-to-use PC, fine-tuned for your specific requirements.</p>
+                  We start with a free consultation to understand your needs (gaming, productivity, content creation, etc.), budget, and performance goals. Then, we design a tailored parts list, source high-quality components, and professionally assemble/test your system. You’ll receive a ready-to-use PC, fine-tuned for your specific requirements.
                 </details>
                 <details class="border-outline">
-                  <summary>What if I need a custom solution not listed on your website?</summary>
-                  <p>We can create custom tech solutions tailored to your needs! Contact us, and we’ll discuss the best approach for your project.</p>
+                   <summary>Can I request a tech service that’s not on your site?</summary>
+                  Yes, we can create custom solutions tailored to your needs! Contact us, and we’ll discuss the best approach for your project.
                 </details>
               </div>
             </div>
@@ -160,14 +158,35 @@
     display: grid;
     place-items: center;
     position: relative;
-    background: rgb(8,4,17);
+    min-height: 90vh;
+    background: var(--color-dark);
     background: linear-gradient(90deg, rgba(8,4,17,1) 100%, rgba(65,78,210,1) 0%);
+    isolation: isolate;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    max-width: 400px;
+    aspect-ratio: 1;
+    display: grid;
+    margin-inline: auto;
+    align-self: center;
+    background: linear-gradient(300deg,var(--color-accent),var(--color-primary),var(--color-dark));
+    background-size: 180% 180%;
+    animation: gradient-animation 3s ease infinite;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(100px);
   }
 
   .hero p {
+   text-align: center;
     color: var(--color-accent);
-    margin-top: 2rem;
-    max-width: 35ch;
+      margin-top: 1rem;
+    /* margin-top: 2rem;
+    max-width: 35ch; */
   }
 
   .cta-section .cards__container.flex-container,
@@ -175,48 +194,12 @@
     flex-direction: column;
   }
 
-  /* .features {
-    --color-accent: rgb(199, 204, 250);
-    color: var(--color-light);
-      padding: clamp(1em, calc(1em + 2vw), 4em);
-      margin-top: 4em;
-      background-color: rgba(65, 78, 210, 0.7);
-      border-top-left-radius: 2vw;
-      border-top-right-radius: 2vw;
-      border-bottom-left-radius: .5vw;
-      border-bottom-right-radius: .5vw;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      }
-
-      .features .flex-container {
-        gap: 2rem;
-      }
-
-  .feature {
-    width: 100%;
-    padding: 1.5em;
-    background-color: rgba(199, 204, 250, 0.1);
-    border-radius: 1em;
-  } */
-
-  /* .feature:not(:nth-of-type(3)) {
-    border-right: 1px solid var(--color-primary);
-    margin-right: 4em;
-  } */
-
-  /* .feature h2 {
-    font-weight: 900;
-    font-size: clamp(1rem, calc(1rem + .5vw ), 2rem) !important;
-    color: var( --color-dark);
-    margin-bottom: .25em;
-  } */
-
-  /* .feature p {
-    font-size: clamp(.8rem, calc(.8rem + .5vw ), 2rem);
-    color: var(--color-white);
-  } */
-
   .cta-section {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: stretch;
     background: transparent !important;
   }
 
@@ -276,8 +259,9 @@
       bottom: 0;
       width: 100%;
       background: inherit;
-      height: 80px;
-      transform: skew(-40deg, 5deg);
+      height: 30vh;
+      transform: skew(0deg, 8deg);
+      z-index: -1;
     }
 
     h3 {
@@ -338,28 +322,27 @@
       color: var(--color-dark);
       padding: 1em;
       width: 100%;
-      max-width: 900px;
+      max-width: 800px;
       margin-bottom: 2em;
 
       summary {
         font-weight: bold;
+        font-size: clamp(1rem, calc(.5rem + 3vw), 1.69rem);
         color: var(--color-primary);
-        margin-bottom: .5em;
+        /* margin-bottom: .5em; */
         cursor: pointer;
+       
+        list-style-position: outside;
       }
 
       li {
         display: flex;
         align-items: center;
-        margin-bottom: 1em;
-
-        p {
-          margin: 0px;
-        }
+        margin-bottom: .25rem;
       }
 
     svg {
-      font-size: 1.5rem;
+      font-size: 1rem;
       color: var(--color-primary);
       margin-right: .5em;
     }
@@ -393,16 +376,6 @@
     }
   }
 
-  @media screen and (min-width: 700px) {
-    .hero {
-      min-height: 85vh;
-  }
-
-    .faq summary {
-      font-size: 2rem;
-    }
-  }
-
   @media screen and (min-width: 900px) {
     .how-we-work ol {
         flex-direction: row;
@@ -413,22 +386,11 @@
     }
   }
 
-  @media screen and (min-width: 1100px) {
-    .hero p {
-    margin-top: 6rem;
-    margin-left: auto;
-  }
-  }
-
   @media screen and (min-width: 1200px) {
     .cta-section .cards__container.flex-container,
     .how-we-work ol {
         flex-direction: row;
     }
-
-      /* .features .feature {
-        padding-inline: clamp(.5rem, calc(.8rem + .25vw), 2rem);
-      } */
 
     .cta-section .flex-container {
       flex-direction: row;
