@@ -3,7 +3,7 @@
       <div class="container">
         <div class="about-hero-container__content">
           <h1>About Vantablack Technologies</h1>
-          <p class="tagline">Bringing Bold Solutions to a Digital World</p>
+          <p class="tagline">Bringing Bold Solutions to a Digital World.</p>
         </div>
       </div>
     </div>
@@ -91,16 +91,32 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
     background: rgb(8,4,17);
     background: linear-gradient(90deg, rgba(8,4,17,1) 100%, rgba(65,78,210,1) 0%);
     padding-block: 4em;
-    min-height: 60vh;
+    min-height: 90vh;
+    isolation: isolate;
 
-    .about-hero-container__content {
-      max-width: 80ch;
-    }
+   &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    max-width: 400px;
+    aspect-ratio: 1;
+    display: grid;
+    margin-inline: auto;
+    align-self: center;
+    background: linear-gradient(300deg,var(--color-accent),var(--color-primary),var(--color-dark));
+    background-size: 180% 180%;
+    animation: gradient-animation 3s ease infinite;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(100px);
+   }
 
     p {
+      text-align: center;
       color: var(--color-accent);
       margin-top: 1rem;
     }
@@ -136,8 +152,11 @@
       top: 0;
       width: 100%;
       background: inherit;
-      height: 80px;
+      /* height: 80px;
       transform: skew(50deg, -5deg);
+      z-index: -1; */
+      height: 30vh;
+      transform: skew(0deg, -8deg);
       z-index: -1;
     }
   }
@@ -172,10 +191,6 @@
       justify-content: space-between;
     }
 
-    .about-hero-container {
-      min-height: 60vh;
-    }
-
   }
 
   @media screen and (min-width: 1200px) {
@@ -194,6 +209,12 @@
   .why-choose-us p:first-child {
     margin-top: 6rem;
   }
+
+     .about-us-text {
+      display: grid;
+      place-content: center;
+      min-height: 60vh;
+    }
 
   .why-choose-us .reasons {
     padding-top: 10em;

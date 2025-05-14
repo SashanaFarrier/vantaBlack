@@ -73,7 +73,7 @@
 
   footer p,
   footer nav a {
-    font-size: clamp(.8rem, calc(1rem + .25vw), 1.5rem);
+    font-size: clamp(.8rem, calc(.8rem + .25vw), 1.5rem);
   }
 
   .logo {
