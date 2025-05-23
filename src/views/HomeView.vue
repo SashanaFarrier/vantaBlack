@@ -1,6 +1,7 @@
 <script setup>
     //import shapes from '@/assets/services-img.png'
     //  import shapes from '@/assets/balls.png'
+    import illustrationImg from '@/assets/digital.png'
     import targetImg from '@/components/icons/target.png'
     import brainstormImg from '@/components/icons/brainstorming.png'
     import consultingImg from '@/components/icons/consulting.png'
@@ -13,8 +14,14 @@
 <template>
   <section class="hero">
     <div class="container">
-      <h1>Web development and computer services</h1>
+      <div class="hero__content">
+        <h1>Web development and computer services</h1>
        <p>Empowering small businesses, startups, and individuals to succeed online.</p>
+        <li><RouterLink to="/contact" class="btn">Get in touch</RouterLink></li>
+       <div class="hero-img">
+         <img :src="illustrationImg" alt="">
+       </div>
+      </div>
     </div>
   </section>
   <main>
@@ -181,14 +188,29 @@
     filter: blur(100px);
   }
 
-  .hero p {
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
    text-align: center;
     color: var(--color-accent);
-      margin-top: 1rem;
+      margin-bottom: 3rem;
     /* margin-top: 2rem;
     max-width: 35ch; */
   }
 
+  .hero-img {
+    position: relative;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  }
+
+  
   .cta-section .cards__container.flex-container,
   .how-we-work ol {
     flex-direction: column;
