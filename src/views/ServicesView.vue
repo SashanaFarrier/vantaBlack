@@ -1,6 +1,7 @@
 <script setup>
   import CTA from '@/components/CTA.vue';
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+  import computerImg from '@/assets/computer-img.jpg'
 
 </script>
 
@@ -8,8 +9,10 @@
   <div class="services-hero-container">
     <div class="container">
       <div class="services-hero-container__content">
-        <h1>Our Services</h1>
-        <p class="tagline">Practical, high-quality tech solutions to help you grow, simplify, and succeed.</p>
+        <h1>Tech solutions to help you grow.</h1>
+           <div class="hero-img">
+            <img :src="computerImg" alt="">
+          </div>
       </div>
     </div>
   </div>
@@ -125,7 +128,6 @@
     position: relative;
     background: rgb(8,4,17);
     background: linear-gradient(90deg, rgba(8,4,17,1) 100%, rgba(65,78,210,1) 0%);
-    padding-block: 4em;
     min-height: 90vh;
     isolation: isolate;
 
@@ -145,13 +147,19 @@
       z-index: -1;
       filter: blur(100px);
     }
-  
 
-    p {
+    .hero-img {
       text-align: center;
-      color: var(--color-accent);
-      margin-top: 1rem;
-    }
+      position: relative;
+      margin-top: 4rem;
+      border-radius: 2em;
+      overflow: hidden;
+
+        img {
+          max-height: 400px;
+          object-fit: cover;
+        }
+      }
   }
 
   .services-container > ul {
@@ -237,7 +245,7 @@
   .services-container > ul > li::before {
     content: "";
     position: absolute;
-    top: -55px;
+    top: -60px;
     transform: translate(-50%);
     background-color: var(--color-primary);
     width: 90px;
@@ -270,7 +278,7 @@
 
   @media screen and (min-width: 1778px) {
     .services-container > ul > li {
-    margin-bottom: 4em;
-  }
+      margin-bottom: 4em;
+    }
   }
 </style>

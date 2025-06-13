@@ -28,7 +28,7 @@
   --color-accent: rgb(163, 171, 243);
   --color-white: #ffffff;
 
-  --section-gap: 4rem;
+  --section-gap: 6rem;
 }
 
 /* semantic color variables for this project */
@@ -112,6 +112,10 @@
 
 .btn-outline {
   background-color: transparent;
+}
+
+.btn-large {
+   font-size: clamp(1.25rem, calc(1rem + 2vw), 1.5rem);
 }
 
 .btn:hover {

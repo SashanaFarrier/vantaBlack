@@ -50,8 +50,8 @@ a {
 }
 
 h1 {
-  font-size: clamp(1.5rem, calc(1rem + 3vw), 5.61rem);
-  text-align: center;
+  font-size: clamp(1.5rem, calc(1rem + 4vw), 5.61rem);
+  /* text-align: center; */
   /* letter-spacing: 5px; */
   color: var(--color-white);
   /* font-size: clamp(2rem, calc(2rem + 6vw), 60%); */
@@ -65,7 +65,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.5rem, calc(1rem + 2vw), 3rem);
+  font-size: clamp(1.5rem, calc(1rem + 1vw), 3rem);
   line-height: 1.2;
 }
 
@@ -102,7 +102,8 @@ img {
 
 header {
   position: relative;
-  padding-block: 2rem;
+  /* padding-block: 2rem; */
+  padding-top: 2rem;
   background: var(--color-dark);
   /* background: linear-gradient(90deg, rgba(8,4,17,1) 0%, rgba(65,78,210,1) 100%); */
   background: linear-gradient(90deg, rgba(8,4,17,1) 100%, rgba(65,78,210,1) 0%);
@@ -133,6 +134,7 @@ ul li a {
 
 .logo {
   max-width: 130px;
+  z-index: 999;
 }
 
 .logo a {
@@ -144,6 +146,12 @@ ul li a {
 section {
   padding-block: var(--section-gap);
   background-color: var(--color-dark);
+}
+
+@media screen and (min-width: 900px) {
+  section:has(.hero__content) {
+  padding-top: 0px;
+}
 }
 
 .cta-container .cta-btns {

@@ -93,20 +93,13 @@ const validateField = (field) => {
           <h1>Everything you need to elevate your digital presence.</h1>
           <ul>
             <li>
-              <img src="" alt="">
-              <h3>Work With Us</h3>
-              <p>We are ready to help you find the right solution for your business needs. Whether you need a website, social media content, SEO, or tech support, we’ve got you covered.</p>
-            </li>
-            <li>
-              <img src="" alt="">
               <h3>Custom Digital Solutions Tailored for You</h3>
               <p>Tell us about your business needs, and we'll provide a customized strategy that aligns with your goals. We work closely with you to ensure the best results.</p>
             </li>
-            <li>
-              <img src="" alt="">
+            <!-- <li>
               <h3>Seamless Project Execution</h3>
               <p>From concept to completion, we ensure a smooth and hassle-free experience. Our team manages each step efficiently, so you can focus on growing your business with confidence.</p>
-            </li>
+            </li> -->
           </ul>
         </div>
         <div class="right-col">
