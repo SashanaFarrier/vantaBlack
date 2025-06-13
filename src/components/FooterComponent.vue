@@ -46,6 +46,7 @@
                 <li><RouterLink to="/">Home</RouterLink></li>
                 <li><RouterLink to="/about">About Us</RouterLink></li>
                 <li><RouterLink to="/services">Services</RouterLink></li>
+                 <li><RouterLink to="/contact">Contact</RouterLink></li>
                 <li><a href="https://www.vbhosting.store/" target="_blank">Hosting & Domain</a></li>
               </ul>
             </nav>

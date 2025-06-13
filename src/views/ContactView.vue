@@ -99,8 +99,9 @@ const validateField = (field) => {
             <!-- <li>
               <h3>Seamless Project Execution</h3>
               <p>From concept to completion, we ensure a smooth and hassle-free experience. Our team manages each step efficiently, so you can focus on growing your business with confidence.</p>
-            </li> -->
+            </li>
           </ul>
+          <p>Let’s find the perfect solution for your business needs—reach out today and let’s get started.</p>
         </div>
         <div class="right-col">
           <form @submit.prevent="submitForm">
@@ -175,6 +176,7 @@ const validateField = (field) => {
 </template>
 <style scoped>
   h1 {
+    text-align: left;
     color: var(--color-primary);
   }
 
