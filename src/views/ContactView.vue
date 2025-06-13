@@ -91,6 +91,16 @@ const validateField = (field) => {
       <div class="contact-container__wrapper">
         <div class="left-col">
           <h1>Everything you need to elevate your digital presence.</h1>
+          <ul>
+            <li>
+              <h3>Custom Digital Solutions Tailored for You</h3>
+              <p>Tell us about your business needs, and we'll provide a customized strategy that aligns with your goals. We work closely with you to ensure the best results.</p>
+            </li>
+            <!-- <li>
+              <h3>Seamless Project Execution</h3>
+              <p>From concept to completion, we ensure a smooth and hassle-free experience. Our team manages each step efficiently, so you can focus on growing your business with confidence.</p>
+            </li>
+          </ul>
           <p>Let’s find the perfect solution for your business needs—reach out today and let’s get started.</p>
         </div>
         <div class="right-col">

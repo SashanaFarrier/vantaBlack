@@ -1,9 +1,15 @@
+<script setup>
+  import servicesImg from '@/assets/digital-world.jpg'
+</script>
+
 <template>
     <div class="about-hero-container">
       <div class="container">
         <div class="about-hero-container__content">
-          <h1>About Vantablack Technologies</h1>
-          <p class="tagline">Bringing Bold Solutions to a Digital World.</p>
+          <h1>Bringing Bold Solutions to a Digital World.</h1>
+           <div class="hero-img">
+            <img :src="servicesImg" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -74,11 +80,6 @@
 
 <style scoped>
 
-  section {
-    text-align: center;
-    padding-block: 5rem;
-  }
-
   h1 {
     margin-bottom: 0px;
   }
@@ -94,7 +95,6 @@
     position: relative;
     background: rgb(8,4,17);
     background: linear-gradient(90deg, rgba(8,4,17,1) 100%, rgba(65,78,210,1) 0%);
-    padding-block: 4em;
     min-height: 90vh;
     isolation: isolate;
 
@@ -115,10 +115,17 @@
     filter: blur(100px);
    }
 
-    p {
-      text-align: center;
-      color: var(--color-accent);
-      margin-top: 1rem;
+  .hero-img {
+    text-align: center;
+    position: relative;
+    margin-top: 4rem;
+    border-radius: 2em;
+    overflow: hidden;
+
+      img {
+        max-height: 400px;
+        object-fit: cover;
+      }
     }
   }
 
@@ -152,9 +159,6 @@
       top: 0;
       width: 100%;
       background: inherit;
-      /* height: 80px;
-      transform: skew(50deg, -5deg);
-      z-index: -1; */
       height: 30vh;
       transform: skew(0deg, -8deg);
       z-index: -1;

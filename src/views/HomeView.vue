@@ -1,6 +1,5 @@
 <script setup>
-    //import shapes from '@/assets/services-img.png'
-    //  import shapes from '@/assets/balls.png'
+    import illustrationImg from '@/assets/digital.png'
     import targetImg from '@/components/icons/target.png'
     import brainstormImg from '@/components/icons/brainstorming.png'
     import consultingImg from '@/components/icons/consulting.png'
@@ -13,8 +12,17 @@
 <template>
   <section class="hero">
     <div class="container">
-      <h1>Web development and computer services</h1>
-       <p>Empowering small businesses, startups, and individuals to succeed online.</p>
+      <div class="hero__content">
+         <div class="flex-container">
+          <div class="text">
+            <h1>Web & Tech <br>Experience</h1>
+            <RouterLink to="/contact" class="btn btn-large">Get in touch</RouterLink>
+          </div>
+          <div class="hero-img">
+            <img :src="illustrationImg" alt="">
+          </div>
+         </div>
+      </div>
     </div>
   </section>
   <main>
@@ -23,40 +31,7 @@
         <div class="banner">
           <h2>Let’s Build, Grow & Fix Together!</h2>
           <p>Ready to level up your digital game? Whether it’s creating a standout website, building a Google AppSheet app to streamline your workflow, or providing reliable tech support or custom PC builds—we’re ready to help. Let’s turn your vision into reality!</p>
-        </div>
-        <div class="cards">
-          <div class="cards__container | flex-container justify-content-between">
-            <div class="card | border-outline">
-              <div class="text-content">
-                <div class="icon">
-                  <FontAwesomeIcon :icon="['fas', 'globe']" />
-                </div>
-                  <h3>Web Design & Development</h3>
-                  <p>Get a modern, responsive, and high-performing website tailored to your brand. Whether it's a business site, e-commerce store, or portfolio, we build it right.</p>
-                </div>
-                  <RouterLink to="/services#services" class="btn">Learn More</RouterLink>
-              </div>
-              <div class="card | border-outline">
-                <div class="text-content">
-                  <div class="icon">
-                    <FontAwesomeIcon :icon="['fas', 'mobile-screen']" />
-                  </div>
-                  <h3>Google AppSheet Development</h3>
-                  <p>Ideal for businesses looking to automate processes without complex coding.</p>
-                </div>
-                  <RouterLink to="/services#services" class="btn">Learn More</RouterLink>
-            </div>
-            <div class="card | border-outline">
-              <div class="text-content">
-                <div class="icon">
-                  <FontAwesomeIcon :icon="['fas', 'computer']" />
-                </div>
-                 <h3>Computer Repair & Custom Builds</h3>
-                <p>Slow or glitchy PC? Or need a custom high-performance rig? We repair and build computers tailored to your needs.</p>
-              </div>
-                <RouterLink to="/services#services" class="btn">Learn More</RouterLink>
-            </div>
-            </div>
+          <RouterLink to="/contact" class="btn btn-large">Contact us</RouterLink>
         </div>
       </div>
     </section>
@@ -162,73 +137,72 @@
     background: var(--color-dark);
     background: linear-gradient(90deg, rgba(8,4,17,1) 100%, rgba(65,78,210,1) 0%);
     isolation: isolate;
+
+    h1 {
+      /* font-size: clamp(1.5rem, calc(2rem + 3vw), 5.61rem); */
+    }
   }
 
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    max-width: 400px;
-    aspect-ratio: 1;
-    display: grid;
+  .hero__content {
+    text-align: center;
+   
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 4em;
+  }
+
+  .hero-img {
+    position: relative;
     margin-inline: auto;
-    align-self: center;
-    background: linear-gradient(300deg,var(--color-accent),var(--color-primary),var(--color-dark));
-    background-size: 180% 180%;
-    animation: gradient-animation 3s ease infinite;
-    border-radius: 50%;
-    z-index: -1;
-    filter: blur(100px);
+    margin-bottom: 2em;
+
+     &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      max-width: 400px;
+      aspect-ratio: 1;
+      display: grid;
+      margin-inline: auto;
+      align-self: center;
+      background: linear-gradient(300deg,var(--color-accent),var(--color-primary),var(--color-dark));
+      background-size: 180% 180%;
+      animation: gradient-animation 3s ease infinite;
+      border-radius: 50%;
+      z-index: -1;
+      filter: blur(100px);
+    }
   }
 
-  .hero p {
-   text-align: center;
-    color: var(--color-accent);
-      margin-top: 1rem;
-    /* margin-top: 2rem;
-    max-width: 35ch; */
   }
 
-  .cta-section .cards__container.flex-container,
+  .cta-section,
   .how-we-work ol {
     flex-direction: column;
   }
 
   .cta-section {
+    position: relative;
     display: grid;
     place-content: center;
     width: 100%;
     min-height: 100vh;
     justify-content: stretch;
-    background: transparent !important;
-  }
+    background-color: transparent !important;
+    isolation: isolate;
 
-  .cta-section .cards__container {
-      margin-top: 3em;
-    }
-
-  .cta-section .card {
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 0%;
-    transition: all .25s ease-in-out;
-
-    &:hover {
-      cursor: pointer;
-      transform: translateY(-5px);
-      box-shadow: 5px 10px var(--color-dark);
-    }
-
-    svg {
-      font-size: 2rem;
-    }
-
-    .text-content {
-      flex-grow: 2;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url(../assets/network.png);
+      filter: blur(2px);
+      z-index: -1;
     }
 
     .btn {
-      margin-inline: auto;
+      margin-top: 3rem;
     }
   }
 
@@ -298,10 +272,6 @@
     }
   }
 
-  .cards__container {
-    gap: 2em;
-  }
-
   .faq {
     color: black;
     background: transparent;
@@ -329,7 +299,6 @@
         font-weight: bold;
         font-size: clamp(1rem, calc(.5rem + 3vw), 1.69rem);
         color: var(--color-primary);
-        /* margin-bottom: .5em; */
         cursor: pointer;
        
         list-style-position: outside;
@@ -353,6 +322,7 @@
   .footer-cta {
     font-size: 2.5rem;
     padding-bottom: 3em;
+    padding-top: 0px;
     background: transparent;
   }
 
@@ -377,6 +347,13 @@
   }
 
   @media screen and (min-width: 900px) {
+
+    .hero__content {
+      text-align: left;
+      .flex-container {
+        flex-direction: row;
+      }
+  }
     .how-we-work ol {
         flex-direction: row;
     }
@@ -387,7 +364,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    .cta-section .cards__container.flex-container,
+    .cta-section,
     .how-we-work ol {
         flex-direction: row;
     }
@@ -399,9 +376,6 @@
     .cta-section {
       padding-bottom: 8em;
 
-      .cards__container {
-        margin-top: 6em
-      }
     }
 
     .banner {
